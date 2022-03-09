@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
-import { Route } from 'react-router';
-import { Layout } from './components/Layout';
-import { Home } from './components/Home';
-import { FetchData } from './components/FetchData';
-import { Counter } from './components/Counter';
-
+import Navbar from './components/Navbar';
 import './custom.css'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Translate from './components/Translate';
+import Courses from './components/Courses';
+import Information from './components/Information';
 
-export default class App extends Component {
-  static displayName = App.name;
-
-  render () {
+function App  (){
     return (
-      <Layout>
-        <Route exact path='/' component={Home} />
-        <Route path='/counter' component={Counter} />
-        <Route path='/fetch-data' component={FetchData} />
-      </Layout>
+
+      <Router>
+        <Navbar/>
+        <Switch>
+          <Route exact path='/' component={Translate}/>
+          <Route exact path='/courses' component={Courses}/>
+          <Route exact path='/information' component={Information}/>
+        </Switch>
+      </Router>
     );
   }
-}
+
+export default  App;
