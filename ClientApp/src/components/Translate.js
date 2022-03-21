@@ -5,7 +5,7 @@ function Translate() {
   return (
     <div>
       <h1>TT</h1>
-      <h2>Translate
+      <h2>Dit is de pagina van de vertaalmachine
         
       </h2>
     </div>
