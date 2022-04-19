@@ -1,5 +1,6 @@
-import React,{useState, useEffect} from 'react'
-import './Navbar.css'
+
+import React, { useState, useEffect } from 'react'
+//import './Navbar.css'
 import {Link} from 'react-router-dom'
 
 
@@ -27,9 +28,10 @@ export default function Navbar() {
       {(click || width>500) &&(
               
               <ul className='list'>
-              <li className="items"><Link to='/'> Translate </Link></li>
-              <li className="items"><Link to='/courses'>Courses</Link></li>
-              <li className="items"><Link to='/information'>Information</Link></li>
+              <li className="items"><Link to='/'> Hoofdpagina </Link></li>
+              <li className="items"><Link to='/courses'>Cursus</Link></li>
+              <li className="items"><Link to='/translate'> Vertaalmachine </Link></li>
+              <li className="items"><Link to='/information'>Informatie</Link></li>
               </ul>
           )} 
       </ul>

@@ -4,7 +4,7 @@ function Cursus() {
   return (
     <div>
       <h1>C</h1>
-      <p>Courses</p>
+      <p>cursus</p>
     </div>
   )
 }
