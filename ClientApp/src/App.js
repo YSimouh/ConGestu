@@ -1,6 +1,4 @@
-import Navbar from './components/Navbar';
 import Navigation from './components/NavBarBootstrap'; 
-//import './custom.css'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Translate from './components/Translate';
 import Courses from './components/Courses';
