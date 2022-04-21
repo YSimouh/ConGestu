@@ -7,7 +7,7 @@ function Home() {
         <div>
 
             <h1>Welkom bij ConGestu</h1>
-            <img src = {logo}/>
+            <img class="home-header-img" src = {logo}/>
             <p>Hier waarschijnlijk een knop om meteen een cursus te proberen</p>
             <p>of anders om in te loggen idk</p>
 
