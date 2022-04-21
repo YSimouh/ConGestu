@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Button, Dropdown, DropdownButton } from 'react-bootstrap';
-import '../styling/translate.css';
+import '../design/translate.css';
 
 function Translate() {
   return (
