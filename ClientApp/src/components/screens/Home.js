@@ -2,7 +2,7 @@
 import '../design/home.css';
 import  logo from '../pictures/logo-transparant.png';
 import '../design/design.css'
-import { Navbar, Nav, Container } from 'react-bootstrap';
+// import { Navbar, Nav, Container } from 'react-bootstrap';
 import {Link } from "react-router-dom";
 
 function Home() {

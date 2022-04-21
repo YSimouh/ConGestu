@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../design/levels.css';
 import 'react-toastify/dist/ReactToastify.min.css';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import logo from "../pictures/logo.png";
 import H from "../pictures/sign/H.png";
 import R from "../pictures/sign/R.png";

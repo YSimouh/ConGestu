@@ -3,7 +3,7 @@ import '../parts/levelholder';
 import '../design/levels.css'
 import Levelholder from '../parts/levelholder';
 import 'react-toastify/dist/ReactToastify.min.css';
-import { ToastContainer, toast,Flip } from 'react-toastify';
+import { ToastContainer, Flip } from 'react-toastify';
 
 
 function Courses() {
