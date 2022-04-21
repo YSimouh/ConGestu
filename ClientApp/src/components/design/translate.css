@@ -4,6 +4,7 @@
 
 .intro-container p {
     margin:1rem 0 0;
+    text-align: center;
 }
 
 .language-switch-button {
@@ -13,4 +14,7 @@
 form {
     min-height:0;
     margin:1rem 0 0;
+}
+.center{
+    text-align: center;
 }

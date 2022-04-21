@@ -4,7 +4,7 @@ import '../design/translate.css';
 
 function Translate() {
   return (
-    <div>
+    <div className='center'>
       <div class="intro-container">
         <h1>Welkom op de vertaal pagina</h1>
         <p>
