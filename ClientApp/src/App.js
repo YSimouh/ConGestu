@@ -4,6 +4,7 @@ import Translate from './components/Translate';
 import Courses from './components/Courses';
 import Information from './components/Information';
 import Home from './components/Home';
+import './styling/NavBarBootstrap.css';
 import './bootstrap.css';
 
 function App  (){
