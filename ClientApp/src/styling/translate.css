@@ -1,0 +1,16 @@
+.intro-container {
+    margin:1rem 0 0;
+}
+
+.intro-container p {
+    margin:1rem 0 0;
+}
+
+.language-switch-button {
+    margin:0 1rem;
+}
+
+form {
+    min-height:0;
+    margin:1rem 0 0;
+}
