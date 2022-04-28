@@ -1,22 +1,49 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import { Redirect } from 'react-router';
 import "./loginStyle.css";
 
+function allUsers() {
+
+    var values = [],
+        keys = Object.keys(localStorage),
+        i = keys.length;
+
+    while (i--) {
+        values.push(localStorage.getItem(keys[i]));
+    }
+    return values;
+}
+
 function Login() {
+    // Create account redirect
+
+    const history = useHistory();
+
+    const routeCreateAccount = () => {
+        let path = `/createAccount`;
+        history.push(path);
+    }
+
     // React States
     const [errorMessages, setErrorMessages] = useState({});
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     // User Login info
-    const database = [
-        {
-            username: "user1",
-            password: "pass1"
-        },
-        {
-            username: "user2",
-            password: "pass2"
+    let profile = "";
+    let database = [];
+    const users = allUsers();
+    const i = users.length;
+    let j = 0;
+    while (j < i) {
+        let json = JSON.parse(users[j]);
+        database[j] = {
+            username: json.username,
+            password: json.password
         }
-    ];
+        j++;
+    }
 
     const errors = {
         uname: "invalid username",
@@ -30,7 +57,7 @@ function Login() {
         var { uname, pass } = document.forms[0];
 
         // Find user login info
-        const userData = database.find((user) => user.username === uname.value);
+        const userData = database.find(user => user.username === uname.value);
 
         // Compare user info
         if (userData) {
@@ -39,13 +66,15 @@ function Login() {
                 setErrorMessages({ name: "pass", message: errors.pass });
             } else {
                 setIsSubmitted(true);
+                setIsLoggedIn(true);
+                profile = uname.value;
+                console.log(name);
             }
         } else {
             // Username not found
             setErrorMessages({ name: "uname", message: errors.uname });
         }
     };
-
 
     // Generate JSX code for error message
     const renderErrorMessage = (name) =>
@@ -78,10 +107,10 @@ function Login() {
         <div className="app">
             <div className="login-form">
                 <div className="title">Sign In</div>
-                {isSubmitted ? <div>User is successfully logged in</div> : renderForm }
+                {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
+                {isLoggedIn ? <Redirect to={"/profile/" + profile} /> : null}
             </div>
-
-            <Link to="/createAccount" className="createAccountButton">Create Account</Link>
+            <button className="createAccountButton" onClick={routeCreateAccount}>Create Account</button>
         </div>
     );
 }

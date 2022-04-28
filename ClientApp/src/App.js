@@ -10,6 +10,7 @@ import './bootstrap.css';
 import CourseLevel2 from './components/CourseLevel2';
 import Login from './components/Login';
 import createAccount from './components/createAccount';
+import profilePage from './profilePage';
 
 function App  (){
     return (
@@ -24,6 +25,7 @@ function App  (){
                 <Route exact path='/CourseLevel2' component={CourseLevel2} />
                 <Route exact path='/login' component={Login} />
                 <Route exact path='/createAccount' component={createAccount} />
+                <Route path='/profile' component={profilePage} />
         </Switch>
       </Router>
     );
