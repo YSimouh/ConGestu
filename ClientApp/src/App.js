@@ -1,11 +1,10 @@
-import Navbar from './components/Navbar';
-import Navigation from './components/NavBarBootstrap'; 
-//import './custom.css'
+import Navigation from './components/parts/NavBarBootstrap'; 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Translate from './components/Translate';
-import Courses from './components/Courses';
-import Information from './components/Information';
-import Home from './components/Home';
+import Translate from './components/screens/Translate';
+import Courses from './components/screens/Courses';
+import Information from './components/screens/Information';
+import Home from './components/screens/Home';
+//import './design/NavBarBootstrap.css';
 import './bootstrap.css';
 import CourseLevel2 from './components/CourseLevel2';
 import Login from './components/Login';

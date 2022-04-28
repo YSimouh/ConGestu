@@ -1,0 +1,16 @@
+.NavBarBootstrap{
+    background-color: #1d3461;
+    color:white !important;
+}
+
+#responsive-navbar-nav {
+    justify-content: center;
+}
+
+.nav-link {
+    color: rgb(248, 244, 248) !important;
+}
+.pos{
+    margin: auto;
+}
+
