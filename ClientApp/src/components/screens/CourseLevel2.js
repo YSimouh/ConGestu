@@ -1,8 +1,8 @@
 import React from 'react';
-import a from './afbeeldingen/a.png';
-import b from './afbeeldingen/b.png';
-import c from './afbeeldingen/c.png';
-import d from './afbeeldingen/d.png';
+import a from '../afbeeldingen/a.png';
+import b from '../afbeeldingen/b.png';
+import c from '../afbeeldingen/c.png';
+import d from '../afbeeldingen/d.png';
 
 const afbeeldingList = [
     { key: 'a', img: a },

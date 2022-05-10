@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Redirect } from 'react-router';
-import "./loginStyle.css";
+import "../design/loginStyle.css";
+import updateProgress from "../parts/updateProgress";
 
+function updateProgress1() {
+    updateProgress(1,true);
+    return
+}
 function allUsers() {
 
     var values = [],
@@ -68,7 +73,18 @@ function Login() {
                 setIsSubmitted(true);
                 setIsLoggedIn(true);
                 profile = uname.value;
-                console.log(name);
+
+                const currentUser = JSON.parse(window.localStorage.getItem(profile));
+
+                const key = "currentUser";
+                const user = {
+                    username: currentUser.username,
+                    password: currentUser.password,
+                    courseLevel1: currentUser.courseLevel1,
+                    courseLevel2: currentUser.courseLevel2
+                };
+                window.localStorage.setItem(key, JSON.stringify(user));
+
             }
         } else {
             // Username not found
@@ -87,12 +103,12 @@ function Login() {
         <div className="form">
             <form onSubmit={handleSubmit}>
                 <div className="input-container">
-                    <label>Username </label>
+                    <label className="label">Username </label>
                     <input type="text" name="uname" required />
                     {renderErrorMessage("uname")}
                 </div>
                 <div className="input-container">
-                    <label>Password </label>
+                    <label className="label">Password </label>
                     <input type="password" name="pass" required />
                     {renderErrorMessage("pass")}
                 </div>
@@ -104,13 +120,14 @@ function Login() {
     );
 
     return (
-        <div className="app">
+        <div className="loginPage">
             <div className="login-form">
                 <div className="title">Sign In</div>
                 {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
                 {isLoggedIn ? <Redirect to={"/profile/" + profile} /> : null}
             </div>
             <button className="createAccountButton" onClick={routeCreateAccount}>Create Account</button>
+            <button className="createAccountButton" onClick={updateProgress1}>Update Progress</button>
         </div>
     );
 }

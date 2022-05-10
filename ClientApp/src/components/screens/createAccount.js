@@ -1,9 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { Redirect } from 'react-router';
 
-import "./loginStyle.css";
+import "../design/loginStyle.css";
 
 function createAccount() {
 
@@ -65,6 +64,7 @@ function createAccount() {
             <div className="login-form">
                 <div className="title">Create Account</div>
                 {isSubmitted ? <div>Account created successfully</div> : renderForm}
+                {isSubmitted ? <button className="createAccountButton" onClick={routeBack}>Back</button> : null}
             </div>
         </div>
     );

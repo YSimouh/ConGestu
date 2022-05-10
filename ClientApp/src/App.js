@@ -6,10 +6,10 @@ import Information from './components/screens/Information';
 import Home from './components/screens/Home';
 //import './design/NavBarBootstrap.css';
 import './bootstrap.css';
-import CourseLevel2 from './components/CourseLevel2';
-import Login from './components/Login';
-import createAccount from './components/createAccount';
-import profilePage from './profilePage';
+import CourseLevel2 from './components/screens/CourseLevel2';
+import Login from './components/screens/Login';
+import createAccount from './components/screens/createAccount';
+import profilePage from './components/screens/profilePage';
 
 function App  (){
     return (
