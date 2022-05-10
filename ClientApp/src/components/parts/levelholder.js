@@ -1,55 +1,13 @@
 import React, { useState } from 'react';
 import '../design/levels.css';
 import 'react-toastify/dist/ReactToastify.min.css';
+import { ToastContainer, Flip } from 'react-toastify';
 import { toast } from 'react-toastify';
-import logo from "../pictures/logo.png";
-import H from "../pictures/sign/H.png";
-import R from "../pictures/sign/R.png";
+import {Link, useLocation} from "react-router-dom";
 
-
-export default function Levelholder() {
-	const questions = [
-		{
-			// questionText: 'Wat is het beste Project groepje',
-			answerOptions: [
-				{ answerText: 'Letter C', isCorrect: false },
-				{ answerText: 'Letter H', isCorrect: true },
-				{ answerText: 'Letter I', isCorrect: false },
-				{ answerText: 'Letter Z', isCorrect: false },
-			],
-			picture:H,
-		},
-		{
-			// questionText: 'Wie is de CEO van Tesla',
-			answerOptions: [
-				{ answerText: 'Letter A', isCorrect: false },
-				{ answerText: 'Letter z', isCorrect: false },
-				{ answerText: 'Letter F', isCorrect: false },
-				{ answerText: 'Letter R', isCorrect: true },
-			],
-			picture:R,
-		},
-		{
-			// questionText: 'Waar komt de iPhone vandaan :) ?',
-			answerOptions: [
-				{ answerText: 'Apple', isCorrect: true },
-				{ answerText: 'Intel', isCorrect: false },
-				{ answerText: 'Amazon', isCorrect: false },
-				{ answerText: 'Microsoft', isCorrect: false },
-			],
-			picture:logo,
-		},
-		{
-			// questionText: 'Wat is een mooi getal?',
-			answerOptions: [
-				{ answerText: '1', isCorrect: false },
-				{ answerText: '4', isCorrect: false },
-				{ answerText: '6', isCorrect: false },
-				{ answerText: '7', isCorrect: true },
-			],
-			picture:logo,
-		},
-	];
+export default function Levelholder(props) {
+	const location= useLocation();
+	const {questions}=location.state;
 
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
@@ -89,8 +47,22 @@ export default function Levelholder() {
 		};
 	};
 	return (
+		<>
+		<ToastContainer
+          toastStyle={{ backgroundColor: "black" }}
+          position="top-center"
+          transition={Flip}
+          autoClose={900}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeButton={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
 		<div>
-
 		<div className='app'>
 			{showScore ? (
 				<div className='score-section'>
@@ -116,7 +88,9 @@ export default function Levelholder() {
 				</>
 			)}
 		</div>
-		
 		</div>
+
+		</>
+		
 	);
 }
