@@ -17,7 +17,7 @@ export default function Cursusoption(props){
                     state:{
                        questions:props.questions 
                     }
-                }} params={{text:"hello"}} style={{ textDecoration: 'none' }}>
+                }}  style={{ textDecoration: 'none' }}>
                 <button class="start">
                     START
                     </button>
