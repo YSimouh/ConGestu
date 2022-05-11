@@ -1,0 +1,13 @@
+.rows{
+    display: flex; /* or inline-flex */
+    flex-direction: row ;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* gap: 40px 20px; */
+    row-gap: 20px;
+}
+.item {
+    flex: 0 32%;
+    height: 100px;
+    margin-bottom: 2%; /*(100-32*3)/2*/
+  }
