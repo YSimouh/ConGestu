@@ -126,7 +126,7 @@ function Login() {
                 {isSubmitted ? <div>Gebruiker is ingelogd!</div> : renderForm}
                 {isLoggedIn ? <Redirect to={"/profile/" + profile} /> : null}
             </div>
-            <button className="createAccountButton" onClick={routeCreateAccount}>Create Account</button>
+            <button className="createAccountButton" onClick={routeCreateAccount}>Account maken</button>
             <button className="createAccountButton" onClick={updateProgress1}>Update Progress</button>
         </div>
     );

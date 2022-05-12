@@ -55,7 +55,7 @@ function profilePage() {
                             />
                         </div>
                     </p>
-                    <button>Sign out</button>
+                    <button>Uitloggen</button>
                 </div>
             </div>
         </div>
