@@ -1,6 +1,6 @@
 import React from 'react';
 import '../design/profileCSS.css';
-import { CircularProgressbar } from 'react-circular-progressbar';
+import { buildStyles, CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 function profilePage() {
@@ -9,7 +9,11 @@ function profilePage() {
     var search_params = url.searchParams;
     url.search = search_params.toString();
     const profile = JSON.parse(window.localStorage.getItem("currentUser"));
-    const percentage = 100;
+    const l1Answers = profile.courseLevel1.correctAnswers;
+    const l1TotalAnswers = profile.courseLevel1.totalAnswers;
+    const l2Answers = profile.courseLevel2.correctAnswers;
+    const l2TotalAnswers = profile.courseLevel2.totalAnswers;
+  
     return (
         <div className="box">
             <div className="Card">
@@ -22,11 +26,35 @@ function profilePage() {
                     <h3> user123 </h3>
                     <h4> Beginner </h4>
                     <p>Course level 1:
-                        <div style={{ width: 25, height: 25}}>
-                        <CircularProgressbar value={100} />
+                        <div style={{ width: 30, height: 30, float: 'right'}}>
+                            <CircularProgressbar
+                                value={l1Answers}
+                                maxValue={l1TotalAnswers}
+                                text={`${l1Answers / l1TotalAnswers * 100}%`}
+                                styles={{
+                                    text: {
+                                        fill: '#fff',
+                                        fontSize: '20px'
+                                    },
+                                }}
+                            />
                         </div>
                     </p>
-                    <p>Course level 2: {profile.courseLevel2}</p>
+                    <p>Course level 2:
+                        <div style={{ width: 30, height: 30, float: 'right'}}>
+                            <CircularProgressbar
+                                value={l2Answers}
+                                maxValue={l2TotalAnswers}
+                                text={`${l2Answers / l2TotalAnswers * 100}%`}
+                                styles={{
+                                    text: {
+                                        fill: '#fff',
+                                        fontSize: '20px'
+                                    },
+                                }}
+                            />
+                        </div>
+                    </p>
                     <button>Sign out</button>
                 </div>
             </div>

@@ -5,7 +5,7 @@ import "../design/loginStyle.css";
 import updateProgress from "../parts/updateProgress";
 
 function updateProgress1() {
-    updateProgress(1,true);
+    updateProgress(1,3);
     return
 }
 function allUsers() {
@@ -51,8 +51,8 @@ function Login() {
     }
 
     const errors = {
-        uname: "invalid username",
-        pass: "invalid password"
+        uname: "incorrecte gebruikersnaam",
+        pass: "incorrecte wachtwoord"
     };
 
     const handleSubmit = (event) => {
@@ -103,12 +103,12 @@ function Login() {
         <div className="form">
             <form onSubmit={handleSubmit}>
                 <div className="input-container">
-                    <label className="label">Username </label>
+                    <label className="label">Gebruiksnaam</label>
                     <input type="text" name="uname" required />
                     {renderErrorMessage("uname")}
                 </div>
                 <div className="input-container">
-                    <label className="label">Password </label>
+                    <label className="label">Wachtwoord</label>
                     <input type="password" name="pass" required />
                     {renderErrorMessage("pass")}
                 </div>
@@ -122,8 +122,8 @@ function Login() {
     return (
         <div className="loginPage">
             <div className="login-form">
-                <div className="title">Sign In</div>
-                {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
+                <div className="title">Inloggen</div>
+                {isSubmitted ? <div>Gebruiker is ingelogd!</div> : renderForm}
                 {isLoggedIn ? <Redirect to={"/profile/" + profile} /> : null}
             </div>
             <button className="createAccountButton" onClick={routeCreateAccount}>Create Account</button>

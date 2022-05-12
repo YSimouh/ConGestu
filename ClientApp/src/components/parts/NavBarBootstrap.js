@@ -14,7 +14,12 @@ export default function Navigation() {
                             <Nav.Link href='/'>Home</Nav.Link>
                             <Nav.Link href='/courses'>Cursus</Nav.Link>
                             <Nav.Link href='/translate'>Vertaalmachine</Nav.Link>
-                            <Nav.Link href='/information'>Informatie</Nav.Link>
+                             <Nav.Link href='/information'>Informatie</Nav.Link>
+                                <Nav.Link href='/login'>
+                                    <div className="image-container">
+                                        <i class="fa-solid fa-user fa-xl"></i>
+                                    </div>
+                                </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

@@ -34,8 +34,8 @@ function createAccount() {
         const user = {
             username: state.name,
             password: state.pass,
-            courseLevel1: 0,
-            courseLevel2: 0
+            courseLevel1: {totalAnswers: 4, answersCorrect: 0},
+            courseLevel2: {totalAnswers: 4, answersCorrect: 0}
         };
         window.localStorage.setItem(key, JSON.stringify(user))
         setIsSubmitted(true);
@@ -45,11 +45,11 @@ function createAccount() {
             <div className="form">
                 <form onSubmit={handleAccount}>
                     <div className="input-container">
-                        <label>Username </label>
+                        <label>Gebruikersnaam</label>
                         <input type="text" name="name" value={state.name} onChange={handleChange} />
                     </div>
                     <div className="input-container">
-                        <label>Password </label>
+                        <label>Wachtwoord</label>
                         <input type="password" name="pass" value={state.pass} onChange={handleChange} />
                     </div>
                     <div className="button-container">
@@ -62,9 +62,9 @@ function createAccount() {
     return (
         <div className="app">
             <div className="login-form">
-                <div className="title">Create Account</div>
-                {isSubmitted ? <div>Account created successfully</div> : renderForm}
-                {isSubmitted ? <button className="createAccountButton" onClick={routeBack}>Back</button> : null}
+                <div className="title">Account maken</div>
+                {isSubmitted ? <div>Account succesvol aangemaakt!</div> : renderForm}
+                {isSubmitted ? <button className="createAccountButton" onClick={routeBack}>Back</button> : <button className="createAccountButton" onClick={routeBack}>Back</button> }
             </div>
         </div>
     );

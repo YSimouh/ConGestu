@@ -21,38 +21,45 @@ input[type="submit"] {
     margin-top: 10px;
     cursor: pointer;
     font-size: 14px;
-    background: #01d28e;
-    border: 1px solid #01d28e;
+    background: #E6AF2E;
+    border: 1px solid #D8973C;
     color: #fff;
     padding: 10px 20px;
+    border-radius: 5px;
 }
 
 input[type="submit"]:hover {
-    background: #6cf0c2;
+    background: #D8973C;
 }
 .label{
-    color:black;
+    color:white;
 }
 .button-container {
     display: flex;
     justify-content: center;
+    border-radius: 25px;
 }
+
 .createAccountButton {
     display: flex;
     justify-content: center;
     margin-top: 10px;
     cursor: pointer;
     font-size: 15px;
-    background: #01d28e;
-    border: 1px solid #01d28e;
-    color: #fff;
+    background: #E6AF2E;
+    border: 1px solid #D8973C;
+    color: white;
     padding: 10px 20px;
 }
+.createAccountButton:hover{
+    background: #D8973C;
+}
 .login-form {
-    background-color: white;
+    background-color: #1D3461;
     padding: 2rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: auto;
+    border-radius: 25px;
 }
 
 .list-container {
@@ -69,7 +76,7 @@ input[type="submit"]:hover {
 .title {
     font-size: 25px;
     margin-bottom: 20px;
-    color: black;
+    color: white;
     text-align: center;
 }
 
