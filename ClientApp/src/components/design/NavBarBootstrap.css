@@ -14,9 +14,14 @@
     background-color: #08193a;
     background-image: linear-gradient(150deg,#1b3770,#08193a);
     border-radius: 15px;
-    border-style:solid;
-    border-color: #3F88C5 ;
+    border-style: solid;
+    border-color: #3F88C5;
     margin: 2px;
+}
+.nav-link:hover{
+    background:#d8973c;
+    border-color: #d8973c;
+    transition: 0.7s;
 }
 .pos{
     margin: auto;

@@ -43,48 +43,6 @@ function Courses() {
 		return randquestions
 	}
 
-//   const quest = [
-// 		{
-
-// 			answerOptions: [
-// 				{ answerText: 'Letter C', isCorrect: false },
-// 				{ answerText: 'Letter H', isCorrect: true },
-// 				{ answerText: 'Letter I', isCorrect: false },
-// 				{ answerText: 'Letter Z', isCorrect: false },
-// 			],
-// 			picture:require("../pictures/sign/H.png"),
-// 		},
-// 		{
-
-// 			answerOptions: [
-// 				{ answerText: 'Letter A', isCorrect: false },
-// 				{ answerText: 'Letter z', isCorrect: false },
-// 				{ answerText: 'Letter F', isCorrect: false },
-// 				{ answerText: 'Letter R', isCorrect: true },
-// 			],
-// 			picture:require("../pictures/sign/R.png"),
-// 		},
-// 		{
-
-// 			answerOptions: [
-// 				{ answerText: 'Apple', isCorrect: true },
-// 				{ answerText: 'Intel', isCorrect: false },
-// 				{ answerText: 'Amazon', isCorrect: false },
-// 				{ answerText: 'Microsoft', isCorrect: false },
-// 			],
-// 			picture:require("../pictures/logo.png"),
-// 		},
-// 		{
-
-// 			answerOptions: [
-// 				{ answerText: '1', isCorrect: false },
-// 				{ answerText: '4', isCorrect: false },
-// 				{ answerText: '6', isCorrect: false },
-// 				{ answerText: '7', isCorrect: true },
-// 			],
-// 			picture:require("../pictures/logo.png"),
-// 		},
-// 	];
   return (
     <>
       <div class="rows">
