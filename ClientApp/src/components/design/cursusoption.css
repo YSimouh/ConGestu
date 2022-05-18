@@ -1,21 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Abel:400");
 
 .holder {
-  margin: auto;
-  align-items: flex-start;
-  background-color: 
-#3F88C5;
+  background-color:#3F88C5;
   border-radius: 24px;
-  box-shadow: 0px 0px 40px 
-#2f49bf0a;
-  display: auto;
-  flex-direction: column;
-  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
-  min-height: 244px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);  
   padding: 38px 40px;
-  max-width: 600px;
-  width: 90%;
-  /* min-width: 719px; */
+
 }
 .body{
     text-align: center;
@@ -34,10 +24,37 @@
   height: 60px;
   border-style: none;
   
+}
+.oefenen {
+  align-items: center;
+  background-color: 
+  #3F88C5;
+  border-radius: 16px;
+  display: center;
+  height: 55px;
+  margin-top: 11px;
+  min-width: 134px;
+  padding: 0 24px;
+  width: 160px;
+  height: 60px;
+  border: 2px solid ;
+  border-color: #d8973c;
   
 }
 .start:hover {
   background-color:#1D3461;
   transition: 0.7s;
 }
+.oefenen:hover {
+  background-color:#d8973c;
+  transition: 0.7s;
+}
+.allignbuttons{
+  display:flex;
+  flex-direction:row;
+  column-gap: 10px;
+  justify-content: center;
+}
+
+
 
