@@ -12,16 +12,28 @@ export default function Cursusoption(props){
                 <p>
                     {props.text}
                 </p>
-                <Link to={{
-                    pathname:props.link,
-                    state:{
-                       questions:props.questions 
-                    }
-                }}  style={{ textDecoration: 'none' }}>
-                <button class="start">
-                    START
-                    </button>
-                </Link>         
+                <div class="allignbuttons">
+                    <Link to={{
+                        pathname:props.link,
+                        state:{
+                        questions:props.questions 
+                        }
+                    }}  style={{ textDecoration: 'none' }}>
+                    <button class="oefenen">
+                        OEFENEN
+                        </button>
+                    </Link>
+                    <Link to={{
+                        pathname:props.link,
+                        state:{
+                        questions:props.questions 
+                        }
+                    }}  style={{ textDecoration: 'none' }}>
+                    <button class="start">
+                        START
+                        </button>
+                    </Link>      
+                </div>        
             </div>   
         </div>           
     )
