@@ -1,0 +1,35 @@
+
+.card-container{
+    margin-top :100px;
+    overflow:hidden;
+    box-shadow: 0px 0px 15px -5px;
+    transition:0.1s;
+    animation: ease-in-out;
+    background-color:#88b0da;
+    /* background-color: #1d3461; */
+
+}
+.btn-read{
+    border: none;
+    background:none;
+    font-size:x-small;
+    color:#ccf3ef;
+}
+.image-container img{
+    overflow:hidden;
+    height:200px;
+    width:415px;
+    margin-block-end: 5px;
+}
+.card-container:hover{
+    transform:scale(1.1);
+    box-shadow: 0px 0px 15px 0px;
+}
+
+.card-content{
+    margin: 1rem;
+    margin-top: 0.3rem;
+}
+.card-body{
+    
+}

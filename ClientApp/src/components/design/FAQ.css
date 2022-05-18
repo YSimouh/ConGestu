@@ -1,0 +1,48 @@
+.wrap{
+    
+    vertical-align: middle;
+}
+
+.list-vragen{
+    width: 500px;
+    margin-left: 400px;
+    margin-top: 250px;
+}
+
+.item{
+    
+    background: #b3bdbc;
+    margin-bottom: 5px;
+    padding: 10px 20px;
+
+}
+
+.title{
+     
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    
+}
+
+.content{
+    color:#fafdff;
+    max-height: 0;
+    overflow:hidden;
+    transition: all 0s cubic-bezier(1,0,1,0);
+}
+
+.content.show{
+    height:auto;
+    max-height: 9999px;
+    transition: all 0s cubic-bezier(1,0,1,0);
+}
+/* 
+.vragen{
+    height:auto;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+} */
