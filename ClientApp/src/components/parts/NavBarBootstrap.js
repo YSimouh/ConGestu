@@ -1,11 +1,12 @@
 ﻿import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-
+import '../design/NavBarBootstrap.css';
 
 export default function Navigation() {
     return (
         <>
-            <Navbar className="NavBarBootstrap" collapseOnSelect fixed='top' expand='sm'>
+        <div className='pos'>
+            <Navbar className="NavBarBootstrap" collapseOnSelect fixed='top' expand='sm' >
                 <Container>
                     <Navbar.Toggle aria-controls='responsive-navbar-nav' />
                     <Navbar.Collapse id='responsive-navbar-nav'>
@@ -18,6 +19,7 @@ export default function Navigation() {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+            </div>
         </>
     );
 }

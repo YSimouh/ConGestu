@@ -1,8 +1,8 @@
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    text-align: center;
+    /* padding: 3px;
+    margin: auto;
+    text-align: center; */
 }
 
 body{
@@ -10,6 +10,9 @@ body{
     color: white;
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
+}
+.center{
+    text-align: center;
 }
 
 
@@ -42,4 +45,8 @@ form button{
 form button:hover{
     background: #e48f78;
     color:white; 
+}
+
+.home-header-img {
+    max-width:100%;
 }
