@@ -14,7 +14,7 @@ export default function Cursusoption(props){
                 </p>
                 <div class="allignbuttons">
                     <Link to={{
-                        pathname:props.link,
+                        pathname:props.oefenlink,
                         state:{
                         questions:props.questions 
                         }
