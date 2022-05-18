@@ -5,10 +5,17 @@
 
 #responsive-navbar-nav {
     justify-content: center;
+    padding-left: 10px
 }
 
 .nav-link {
-    color: rgb(248, 244, 248) !important;
+    color: white !important;
+    font-weight: bold;
+    background-color: #08193a;
+    border-radius: 15px;
+    border-style:solid;
+    border-color: #3F88C5 ;
+    margin: 2px;
 }
 .pos{
     margin: auto;
