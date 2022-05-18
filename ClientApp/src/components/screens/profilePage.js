@@ -31,10 +31,20 @@ function profilePage() {
                                 value={l1Answers}
                                 maxValue={l1TotalAnswers}
                                 text={`${l1Answers / l1TotalAnswers * 100}%`}
+                                background={true}
                                 styles={{
                                     text: {
+                                        fill: '#1D3461',
+                                        fontSize: '24px'
+                                    },
+                                    background: {
                                         fill: '#fff',
-                                        fontSize: '20px'
+                                    },
+                                    path: {
+                                        stroke: `rgba(230, 175, 46, ${100})`,
+                                        strokeLinecap: 'round',
+                                        transition: 'stroke-dashoffset 0.5s ease 0s',
+                                        transformOrigin: 'center center',
                                     },
                                 }}
                             />
@@ -46,10 +56,20 @@ function profilePage() {
                                 value={l2Answers}
                                 maxValue={l2TotalAnswers}
                                 text={`${l2Answers / l2TotalAnswers * 100}%`}
+                                background={true}
                                 styles={{
                                     text: {
+                                        fill: '#1D3461',
+                                        fontSize: '24px'
+                                    },
+                                    background: {
                                         fill: '#fff',
-                                        fontSize: '20px'
+                                    },
+                                    path: {
+                                        stroke: `rgba(230, 175, 46, ${100})`,
+                                        strokeLinecap: 'round',
+                                        transition: 'stroke-dashoffset 0.5s ease 0s',
+                                        transformOrigin: 'center center',
                                     },
                                 }}
                             />
