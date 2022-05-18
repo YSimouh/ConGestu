@@ -10,8 +10,6 @@ function Home() {
        <div className='center'>
             <h1>Welkom bij ConGestu</h1>
             <img class="home-header-img" src = {logo}/>
-            <p>Hier waarschijnlijk een knop om meteen een cursus te proberen</p>
-            <p>of anders om in te loggen idk</p>
                    
                        
                 <div class="overlap-group">
