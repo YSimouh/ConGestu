@@ -7,6 +7,10 @@
     animation: ease-in-out;
     background-color:#88b0da;
     /* background-color: #1d3461; */
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    min-width:250px;
 
 }
 .btn-read{
@@ -15,10 +19,15 @@
     font-size:x-small;
     color:#ccf3ef;
 }
+
+.image-container{
+    width:100%;
+}
+
 .image-container img{
     overflow:hidden;
     height:200px;
-    width:415px;
+    width:100%;
     margin-block-end: 5px;
 }
 .card-container:hover{

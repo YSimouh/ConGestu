@@ -15,7 +15,7 @@ export default function FAQs(){
         setSelect(i)
     }
     return(
-        <div className="Wrap">
+        <div className="wrap">
             <div className="list-vragen">
                 {Data.map((item, i)=>(
                     <div className="item">
