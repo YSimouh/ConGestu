@@ -5,7 +5,8 @@ import "../design/loginStyle.css";
 import updateProgress from "../parts/updateProgress";
 
 function updateProgress1() {
-    updateProgress(1,1);
+    updateProgress(1, 1);
+    updateProgress(2, 1);
     return
 }
 function allUsers() {
