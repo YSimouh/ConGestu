@@ -21,7 +21,6 @@ function Courses() {
 			const correctanswer=getRandomInt(0,4);
 			const sign=getRandomInt(0,17);
 			const path=""+signs[sign]
-			console.log(path)
 			randquestions[index]={
 				answerOptions: [
 				],
@@ -32,8 +31,12 @@ function Courses() {
 			}
 			for(let b=0;b<4;b++){
 				if(b!=correctanswer){
-					const randint=getRandomInt(0,17)
-					const randsign=""+signs[randint]
+					let randint=getRandomInt(0,17)
+					let randsign=""+signs[randint]
+					while(randsign==path){
+						randint=getRandomInt(0,17)
+						randsign=""+signs[randint]
+					}
 					randquestions[index].answerOptions[b]={
 						answerText:'Letter '+`${randsign}`+"",isCorrect:false
 					}
