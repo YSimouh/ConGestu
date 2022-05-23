@@ -1,7 +1,8 @@
 import React from 'react';
 import '../design/profileCSS.css';
-import { buildStyles, CircularProgressbar } from 'react-circular-progressbar';
+import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import { useHistory } from "react-router-dom";
 
 function profilePage() {
 
@@ -9,11 +10,52 @@ function profilePage() {
     var search_params = url.searchParams;
     url.search = search_params.toString();
     const profile = JSON.parse(window.localStorage.getItem("currentUser"));
-    const l1Answers = profile.courseLevel1.correctAnswers;
+    const l1Answers = profile.courseLevel1.answersCorrect;
     const l1TotalAnswers = profile.courseLevel1.totalAnswers;
-    const l2Answers = profile.courseLevel2.correctAnswers;
+    const l2Answers = profile.courseLevel2.answersCorrect;
     const l2TotalAnswers = profile.courseLevel2.totalAnswers;
-  
+
+    const history = useHistory();
+    const logOut = () => {
+        const key = "currentUser";
+        const user = {
+            username: "",
+            password: "",
+            courseLevel1: "",
+            courseLevel2: ""
+        };
+        window.localStorage.setItem(key, JSON.stringify(user));
+        let path = `/login`;
+        history.push(path);
+    }
+
+    function circularProgressBar(progress, totalAnswers) {
+        return (
+                <CircularProgressbar
+                    value={progress}
+                    maxValue={totalAnswers}
+                    text={`${progress / totalAnswers * 100}%`}
+                    background={true}
+                    styles={{
+                        text: {
+                            fill: '#1D3461',
+                            fontSize: '24px'
+                        },
+                        background: {
+                            fill: '#fff',
+                        },
+                        path: {
+                            stroke: `rgba(230, 175, 46, ${100})`,
+                            strokeLinecap: 'round',
+                            transition: 'stroke-dashoffset 0.5s ease 0s',
+                            transformOrigin: 'center center',
+                        },
+                    }}
+                />
+        );
+    }
+
+
     return (
         <div className="box">
             <div className="Card">
@@ -26,56 +68,16 @@ function profilePage() {
                     <h3> user123 </h3>
                     <h4> Beginner </h4>
                     <p>Course level 1:
-                        <div style={{ width: 30, height: 30, float: 'right'}}>
-                            <CircularProgressbar
-                                value={l1Answers}
-                                maxValue={l1TotalAnswers}
-                                text={`${l1Answers / l1TotalAnswers * 100}%`}
-                                background={true}
-                                styles={{
-                                    text: {
-                                        fill: '#1D3461',
-                                        fontSize: '24px'
-                                    },
-                                    background: {
-                                        fill: '#fff',
-                                    },
-                                    path: {
-                                        stroke: `rgba(230, 175, 46, ${100})`,
-                                        strokeLinecap: 'round',
-                                        transition: 'stroke-dashoffset 0.5s ease 0s',
-                                        transformOrigin: 'center center',
-                                    },
-                                }}
-                            />
+                        <div style={{ width: 30, height: 30, float: 'right' }}>
+                            {circularProgressBar(l1Answers, l1TotalAnswers)}
                         </div>
                     </p>
                     <p>Course level 2:
                         <div style={{ width: 30, height: 30, float: 'right'}}>
-                            <CircularProgressbar
-                                value={l2Answers}
-                                maxValue={l2TotalAnswers}
-                                text={`${l2Answers / l2TotalAnswers * 100}%`}
-                                background={true}
-                                styles={{
-                                    text: {
-                                        fill: '#1D3461',
-                                        fontSize: '24px'
-                                    },
-                                    background: {
-                                        fill: '#fff',
-                                    },
-                                    path: {
-                                        stroke: `rgba(230, 175, 46, ${100})`,
-                                        strokeLinecap: 'round',
-                                        transition: 'stroke-dashoffset 0.5s ease 0s',
-                                        transformOrigin: 'center center',
-                                    },
-                                }}
-                            />
+                            {circularProgressBar(l2Answers, l2TotalAnswers)}
                         </div>
                     </p>
-                    <button>Uitloggen</button>
+                    <button onClick={logOut}>Uitloggen</button>
                 </div>
             </div>
         </div>

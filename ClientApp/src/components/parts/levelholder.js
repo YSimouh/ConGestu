@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.min.css';
 import { ToastContainer, Flip } from 'react-toastify';
 import { toast } from 'react-toastify';
 import {Link, useLocation} from "react-router-dom";
+import updateProgress from '../parts/updateProgress';
 
 export default function Levelholder(props) {
 	const location= useLocation();
@@ -16,6 +17,7 @@ export default function Levelholder(props) {
 	const handleAnswerOptionClick = (isCorrect) => {
 		if (isCorrect) {
 			setScore(score + 1);
+			updateProgress(1, score);
 		}
 
 		const nextQuestion = currentQuestion + 1;

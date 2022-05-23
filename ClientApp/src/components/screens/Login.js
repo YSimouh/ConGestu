@@ -4,11 +4,6 @@ import { Redirect } from 'react-router';
 import "../design/loginStyle.css";
 import updateProgress from "../parts/updateProgress";
 
-function updateProgress1() {
-    updateProgress(1, 1);
-    updateProgress(2, 1);
-    return
-}
 function allUsers() {
 
     var values = [],
@@ -128,7 +123,6 @@ function Login() {
                 {isLoggedIn ? <Redirect to={"/profile/" + profile} /> : null}
             </div>
             <button className="createAccountButton" onClick={routeCreateAccount}>Account maken</button>
-            <button className="createAccountButton" onClick={updateProgress1}>Update Progress</button>
         </div>
     );
 }
