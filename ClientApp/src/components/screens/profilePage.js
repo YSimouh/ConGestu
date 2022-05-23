@@ -65,14 +65,13 @@ function profilePage() {
                     </div>
                 </div>
                 <div className="lower-container">
-                    <h3> user123 </h3>
-                    <h4> Beginner </h4>
-                    <p>Course level 1:
+                    <h3> {profile.username} </h3>
+                    <p>Curses 1:
                         <div style={{ width: 30, height: 30, float: 'right' }}>
                             {circularProgressBar(l1Answers, l1TotalAnswers)}
                         </div>
                     </p>
-                    <p>Course level 2:
+                    <p>Curses 2:
                         <div style={{ width: 30, height: 30, float: 'right'}}>
                             {circularProgressBar(l2Answers, l2TotalAnswers)}
                         </div>
