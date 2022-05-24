@@ -20,7 +20,7 @@ export default function FAQs(){
             <h1 className="title-Q">FAQ</h1>
                 {Data.map((item, i)=>(
                     <div key={i} className="item">
-                        <div className="title" onClick={()=>toggle(i)}>
+                        <div className="title-faq" onClick={()=>toggle(i)}>
                             <h3 className="title-Q">{item.Q}</h3>
                             <span className="title-Q">{select===i?'-':'+'}</span>
                         </div>
