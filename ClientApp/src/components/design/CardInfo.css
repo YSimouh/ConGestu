@@ -1,7 +1,7 @@
 
 .card-container{
     margin-top :100px;
-    overflow:hidden;
+    /* overflow:hidden; */
     box-shadow: 0px 0px 15px -5px;
     transition:0.1s;
     animation: ease-in-out;
@@ -16,8 +16,8 @@
 .btn-read{
     border: none;
     background:none;
-    font-size:x-small;
-    color:#ccf3ef;
+    font-size: 10px;
+    color: #1d3461;
 }
 
 .image-container{
@@ -39,6 +39,7 @@
     margin: 1rem;
     margin-top: 0.3rem;
 }
-.card-body{
-    
+.card-title{
+    font-weight:bolder;
+    color: #1d3461;
 }

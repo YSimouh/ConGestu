@@ -1,0 +1,66 @@
+.about-us{
+    margin-top:200px;
+}
+.contact-info{
+    width:100%;
+    max-width: 600px;
+    height:100%;
+}
+.info-text{
+    padding: 20px; 
+}
+.h1-title{
+    padding-top: 20px;
+    font-weight:bolder;
+    color: #1d3461;
+}
+.h2-title{
+
+    font-weight:bolder;
+    color: #1d3461;
+}
+
+.email-adress{
+    padding:30px;
+}
+
+.contact-us{
+    width:100%;
+    max-width: 600px;
+    height:100%; 
+    max-height: 600px; 
+}
+.message-text{
+    /* margin-left: 10px; */
+    color: black;
+    width: 100%;
+    max-width:510px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.btn-send{
+    vertical-align: middle;
+    margin-top: 20px;
+    width: 100%;
+    max-width:150px;
+    height:40px;
+    border:none;
+    color:black;
+    background-color: #E6AF2E;
+    border-radius: 5px;
+}
+.btn-send:hover{
+    color: black;
+    background-color: #1d3461;
+
+}
+/* .btn-d{
+    display: flex; 
+    justify-content: center;
+} */
+.contact-form{
+    margin-left: -45px;
+    width:600px;
+}

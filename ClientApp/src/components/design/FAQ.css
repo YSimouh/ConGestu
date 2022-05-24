@@ -1,4 +1,5 @@
 .wrap {
+
     vertical-align: middle;
     margin-top: 240px;
 }
@@ -10,11 +11,12 @@
 }
 
 .item{
-    background-color: #1d3461;
+    background-color:#88b0da;
     margin-bottom: 5px;
     padding: 10px 20px;
     width:100%;
-    max-width: 500px;
+    max-width: 700px;
+
 }
 
 .title{  
@@ -22,6 +24,11 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+}
+.title-Q{
+    font-size:xlarge;
+    font-weight:bolder;
+    color: #1d3461;
 }
 
 .content{
@@ -35,4 +42,5 @@
     height:auto;
     max-height: 9999px;
     transition: all 0s cubic-bezier(0,1,0,1);
+    
 }

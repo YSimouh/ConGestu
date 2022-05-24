@@ -29,15 +29,15 @@ function CardInfo({title,imageUrl,body}) {
         </div>
         <div className='card-content'>
             <div className='card-title'>
-                <h3>{title}</h3>
+                <h3 className='card-title' >{title}</h3>
             </div>
             <div className='card-body'>
                 <ReadMore className="read-btn">{body}</ReadMore>
-
+                
             </div>
             
         </div>
-
+        
     </div>
   )
 }

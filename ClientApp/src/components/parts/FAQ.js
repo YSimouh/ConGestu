@@ -17,11 +17,12 @@ export default function FAQs(){
     return(
         <div className="wrap">
             <div className="list-vragen">
+            <h1 className="title-Q">FAQ</h1>
                 {Data.map((item, i)=>(
-                    <div className="item">
-                        <div className="title " onClick={()=>toggle(i)}>
-                            <h3>{item.Q}</h3>
-                            <span>{select===i?'-':'+'}</span>
+                    <div key={i} className="item">
+                        <div className="title" onClick={()=>toggle(i)}>
+                            <h3 className="title-Q">{item.Q}</h3>
+                            <span className="title-Q">{select===i?'-':'+'}</span>
                         </div>
                         <div className={select===i?'content show':'content'}>{item.A}</div>
                     </div>
@@ -36,19 +37,19 @@ export default function FAQs(){
 const Data=[
     {
         Q:'vraag 1',
-        A: 'In principe heeft ieder begrip in de gebarentaal een eigen gebaar. Woorden of namen waar nog geen gebaar voor bestaat, worden gespeld met de vingers. Dat heet vingerspellen. Het spellen van een woord wordt gedaan met een handalfabet: een verzameling gebaren',
+        A: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     },
     {
         Q:'vraag 2',
-        A: 'In principe heeft ieder begrip in de gebarentaal een eigen gebaar. Woorden of namen waar nog geen gebaar voor bestaat, worden gespeld met de vingers. Dat heet vingerspellen. Het spellen van een woord wordt gedaan met een handalfabet: een verzameling gebaren',
+        A: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     },
     {
         Q:'vraag 3',
-        A: 'In principe heeft ieder begrip in de gebarentaal een eigen gebaar. Woorden of namen waar nog geen gebaar voor bestaat, worden gespeld met de vingers. Dat heet vingerspellen. Het spellen van een woord wordt gedaan met een handalfabet: een verzameling gebaren',
+        A: '                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     },
     {
         Q:'vraag 4',
-        A: 'In principe heeft ieder begrip in de gebarentaal een eigen gebaar. Woorden of namen waar nog geen gebaar voor bestaat, worden gespeld met de vingers. Dat heet vingerspellen. Het spellen van een woord wordt gedaan met een handalfabet: een verzameling gebaren',    },
-]
+        A: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+}]
 
 
