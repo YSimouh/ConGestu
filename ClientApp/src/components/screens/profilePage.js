@@ -60,7 +60,7 @@ function profilePage() {
         <div className="box">
             <div className="Card">
                 <div className="upper-container">
-                    <div className="image-container">
+                    <div className="profile-image-container">
                         <img src="https://cdn.iconscout.com/icon/free/png-256/account-avatar-profile-human-man-user-30448.png" height= "100px" width="100px"/>
                     </div>
                 </div>
