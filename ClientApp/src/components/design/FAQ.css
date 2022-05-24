@@ -1,5 +1,4 @@
 .wrap {
-
     vertical-align: middle;
     margin-top: 240px;
 }
@@ -16,7 +15,6 @@
     padding: 10px 20px;
     width:100%;
     max-width: 500px;
-
 }
 
 .title{  
@@ -38,10 +36,3 @@
     max-height: 9999px;
     transition: all 0s cubic-bezier(0,1,0,1);
 }
-/* 
-.vragen{
-    height:auto;
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-} */
