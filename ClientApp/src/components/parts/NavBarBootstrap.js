@@ -11,10 +11,15 @@ export default function Navigation() {
                     <Navbar.Toggle aria-controls='responsive-navbar-nav' />
                     <Navbar.Collapse id='responsive-navbar-nav'>
                         <Nav>
-                            <Nav.Link href='/'>Home</Nav.Link>
-                            <Nav.Link href='/courses'>Cursus</Nav.Link>
-                            <Nav.Link href='/translate'>Vertaalmachine</Nav.Link>
-                            <Nav.Link href='/information'>Informatie</Nav.Link>
+                            <Nav.Link href='/'>&nbsp;Home&nbsp;</Nav.Link>
+                            <Nav.Link href='/courses'>&nbsp;Cursus&nbsp;</Nav.Link>
+                            <Nav.Link href='/translate'>&nbsp;Vertaalmachine&nbsp;</Nav.Link>
+                            <Nav.Link href='/information'>&nbsp;Informatie&nbsp;</Nav.Link>
+                                <Nav.Link href='/login'>
+                                    <div className="image-container">
+                                        <i class="fa-solid fa-user fa-xl"></i>
+                                    </div>
+                                </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

@@ -1,0 +1,20 @@
+.rows{
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, 400px);
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 20px; */
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px 20px;
+    row-gap: 20px; 
+}
+.item {
+    flex: 0 32%;
+    height: 100px;
+    margin-bottom: 2%; 
+    
+  }
+

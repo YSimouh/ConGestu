@@ -18,3 +18,25 @@ form {
 .center{
     text-align: center;
 }
+
+.translate-result-container{
+    margin:1rem 0 0;
+    display:flex;
+    justify-content: center;
+}
+
+.translate-result-container .picture {
+    display:none;
+}
+
+.translate-result-container .picture.show {
+    display:block;
+}
+
+.error-message {
+    display:none;
+}
+
+.error-message.show {
+    display:block;
+}

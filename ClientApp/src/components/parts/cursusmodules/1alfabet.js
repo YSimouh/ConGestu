@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import '../design/levels.css';
+import '../../design/levels.css';
 import 'react-toastify/dist/ReactToastify.min.css';
 import { ToastContainer, Flip } from 'react-toastify';
 import { toast } from 'react-toastify';
 import {Link, useLocation} from "react-router-dom";
-import updateProgress from '../parts/updateProgress';
 
-export default function Levelholder(props) {
+export default function alfabetModule(props) {
 	const location= useLocation();
 	const {questions}=location.state;
 
@@ -17,7 +16,6 @@ export default function Levelholder(props) {
 	const handleAnswerOptionClick = (isCorrect) => {
 		if (isCorrect) {
 			setScore(score + 1);
-			updateProgress(1, score);
 		}
 
 		const nextQuestion = currentQuestion + 1;
@@ -27,7 +25,7 @@ export default function Levelholder(props) {
 			setShowScore(true);
 		}
 		if(isCorrect){
-			return toast.success("Correct!", {
+			return toast.success("Goed", {
 				position: "top-center",
 				hideProgressBar: false,
 				closeOnClick: true,
@@ -38,7 +36,7 @@ export default function Levelholder(props) {
 			
 		}
 		else{
-			return toast.error('Wrong!', {
+			return toast.error('Fout', {
 				position: "top-center",
 				hideProgressBar: false,
 				closeOnClick: true,
@@ -68,13 +66,13 @@ export default function Levelholder(props) {
 		<div className='app'>
 			{showScore ? (
 				<div className='score-section'>
-					You scored {score} out of {questions.length}
+					Je had {score} van de {questions.length} vragen goed
 				</div>
 			) : (
 				<>
 					<div className='question-section'>
 						<div className='question-count'>
-							<span>Question {currentQuestion + 1}</span>/{questions.length}
+							<span>Vraag {currentQuestion + 1}</span>/{questions.length}
 						</div>
 						<div className='question-text'>{questions[currentQuestion].questionText}</div>
 						<img src={questions[currentQuestion].picture} className="picture"/>

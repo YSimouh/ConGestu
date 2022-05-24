@@ -13,7 +13,8 @@
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
   min-height: 244px;
   padding: 38px 40px;
-  width: 600px;
+  max-width: 600px;
+  width: 90%;
   /* min-width: 719px; */
 }
 
@@ -25,8 +26,8 @@
   display: center;
   height: 55px;
   margin-top: 11px;
+  padding: 0 24px;  
   min-width: 134px;
-  padding: 0 24px;
   width: 160px;
   height: 60px;
   border-style: none;

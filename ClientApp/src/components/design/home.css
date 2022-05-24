@@ -50,3 +50,8 @@ form button:hover{
 .home-header-img {
     max-width:100%;
 }
+
+#welkom{
+    color:black;
+    font-weight: bold;
+}
