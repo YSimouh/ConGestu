@@ -3,6 +3,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import '../design/NavBarBootstrap.css';
 
 export default function Navigation() {
+
     return (
         <>
         <div className='pos'>
@@ -16,7 +17,7 @@ export default function Navigation() {
                             <Nav.Link href='/translate'>&nbsp;Vertaalmachine&nbsp;</Nav.Link>
                             <Nav.Link href='/information'>&nbsp;Informatie&nbsp;</Nav.Link>
                                 <Nav.Link href='/login'>
-                                    <div className="image-container">
+                                    <div className="logo-container" style={{ "margin-left": "10px", "margin-right": "10px" }}>
                                         <i class="fa-solid fa-user fa-xl"></i>
                                     </div>
                                 </Nav.Link>

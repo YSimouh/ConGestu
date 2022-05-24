@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Redirect } from 'react-router';
 import "../design/loginStyle.css";
-import updateProgress from "../parts/updateProgress";
 
 function allUsers() {
 
@@ -72,6 +71,7 @@ function Login() {
 
                 const currentUser = JSON.parse(window.localStorage.getItem(profile));
 
+                //set current user to logged in user
                 const key = "currentUser";
                 const user = {
                     username: currentUser.username,
@@ -100,7 +100,7 @@ function Login() {
             <form onSubmit={handleSubmit}>
                 <div className="input-container">
                     <label className="label">Gebruiksnaam</label>
-                    <input type="text" name="uname" required />
+                    <input type="username" name="uname" required />
                     {renderErrorMessage("uname")}
                 </div>
                 <div className="input-container">
