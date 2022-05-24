@@ -34,8 +34,8 @@ function createAccount() {
         const user = {
             username: state.name,
             password: state.pass,
-            courseLevel1: {totalAnswers: 4, answersCorrect: 0},
-            courseLevel2: {totalAnswers: 4, answersCorrect: 0}
+            courseLevel1: {totalAnswers: 7, answersCorrect: 0},
+            courseLevel2: {totalAnswers: 7, answersCorrect: 0}
         };
         window.localStorage.setItem(key, JSON.stringify(user))
         setIsSubmitted(true);
