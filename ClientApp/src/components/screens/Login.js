@@ -14,18 +14,7 @@ function allUsers() {
     }
     return values;
 }
-function alreadyLoggedIn() {
 
-    let currentUser = localStorage.getItem("currentUser");
-
-    currentUser = JSON.parse(currentUser);
-    if (currentUser.username != "") {
-        return <Redirect to={"/profile/" + currentUser.username} />
-    }
-    else {
-        return;
-    }
-}
 function Login() {
     // Create account redirect
 
@@ -127,9 +116,7 @@ function Login() {
     );
 
     return (
-        
         <div className="loginPage">
-            {alreadyLoggedIn()}
             <div className="login-form">
                 <div className="title">Inloggen</div>
                 {isSubmitted ? <div>Gebruiker is ingelogd!</div> : renderForm}
