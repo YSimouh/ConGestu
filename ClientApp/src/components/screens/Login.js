@@ -16,15 +16,21 @@ function allUsers() {
 }
 function alreadyLoggedIn() {
 
-    let currentUser = localStorage.getItem("currentUser");
-
-    currentUser = JSON.parse(currentUser);
-    if (currentUser.username != "") {
-        return <Redirect to={"/profile/" + currentUser.username} />
-    }
-    else {
+    if (localStorage.getItem("currentUser") === null) {
         return;
     }
+    else {
+        let currentUser = localStorage.getItem("currentUser");
+
+        currentUser = JSON.parse(currentUser);
+        if (currentUser.username != "") {
+            return <Redirect to={"/profile/" + currentUser.username} />
+        }
+        else {
+            return;
+        }
+    }
+
 }
 function Login() {
     // Create account redirect

@@ -7,16 +7,25 @@ import {Link } from "react-router-dom";
 
 function isLoggedIn() {
 
-    let currentUser = localStorage.getItem("currentUser");
 
-    currentUser = JSON.parse(currentUser);
-    if (currentUser.username != "") {
-        return <div className="WelcomeContainer">Welkom terug {currentUser.username}!</div>
+    if (localStorage.getItem("currentUser") === null) {
+        return <div className="WelcomeContainer">Maak een account aan om progressie op te slaan!</div>
+
     }
     else {
-        return <div className="WelcomeContainer">Maak een account aan om progressie op te slaan!</div>
+        let currentUser = localStorage.getItem("currentUser");
+        currentUser = JSON.parse(currentUser);
+        if (currentUser.username != "") {
+            return <div className="WelcomeContainer">Welkom terug {currentUser.username}!</div>
+        }
+        else {
+            return <div className="WelcomeContainer">Maak een account aan om progressie op te slaan!</div>
+        }
     }
+
 }
+
+
 
 function Home() {
     return (
