@@ -19,7 +19,7 @@
 
 }
 
-.title{  
+.title-faq{  
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -42,5 +42,4 @@
     height:auto;
     max-height: 9999px;
     transition: all 0s cubic-bezier(0,1,0,1);
-    
 }
