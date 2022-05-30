@@ -1,0 +1,41 @@
+.oefenheadercontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+}
+.oefenheader{
+    width: 600px; 
+    text-align: center;
+}
+.oefencontainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px 20px;
+    row-gap: 20px; 
+}
+.oefenbox{
+    background-color: #252d4a;
+    width: 350px;
+    height: 300px;
+    margin: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 10px 10px 42px 0px rgb(0 0 0 / 75%);
+}
+
+.oefenimg{
+    padding-top: 10px;
+    height: 50%;
+    display: block;
+    filter: blur(20px);
+}
+.oefenimg:hover{
+    filter: blur(0);
+}

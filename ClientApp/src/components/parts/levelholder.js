@@ -38,7 +38,7 @@ export default function Levelholder(props) {
 			
 		}
 		else{
-			return toast.error('Wrong!', {
+			return toast.error('Fout!', {
 				position: "top-center",
 				hideProgressBar: false,
 				closeOnClick: true,
@@ -68,13 +68,13 @@ export default function Levelholder(props) {
 		<div className='app'>
 			{showScore ? (
 				<div className='score-section'>
-					You scored {score} out of {questions.length}
+					U heeft {score} van de {questions.length} vragen goed!
 				</div>
 			) : (
 				<>
 					<div className='question-section'>
 						<div className='question-count'>
-							<span>Question {currentQuestion + 1}</span>/{questions.length}
+							<span>Vraag {currentQuestion + 1}</span>/{questions.length}
 						</div>
 						<div className='question-text'>{questions[currentQuestion].questionText}</div>
 						<img src={questions[currentQuestion].picture} className="picture"/>
