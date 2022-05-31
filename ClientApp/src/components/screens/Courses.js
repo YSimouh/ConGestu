@@ -8,7 +8,7 @@ import generate from '../Functions/Generators';
 
 function Courses() {
   return (
-    <>
+
       <div class="rows">
         <Cursusoption link={"\levelholder"} oefenlink={"\Oefenen"} 
 			questions={generate(7,"sign",["A","B","C","D","E","F","G","H","O","Q","R","S","U","V","X","Y","Z"],"Letter")} 
@@ -25,7 +25,6 @@ function Courses() {
         oefentext="" 
 			header="Sporten" text="Sporten is voor iedereen belangrijk" class="item"/>    
       </div>
-    </>
 )
 }
 

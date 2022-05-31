@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../design/levels.css';
+//import '../design/levels.css';
 import 'react-toastify/dist/ReactToastify.min.css';
 import { ToastContainer, Flip } from 'react-toastify';
 import { toast } from 'react-toastify';

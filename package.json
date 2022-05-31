@@ -1,6 +1,9 @@
 {
   "dependencies": {
+    "react-animated-bg": "^1.2.2",
     "react-circular-progressbar": "^2.0.4",
+    "react-icons": "^4.4.0",
+    "react-native-vector-icons": "^9.1.0",
     "write-file-atomic": "^4.0.1",
     "write-json-file": "^5.0.0"
   }
