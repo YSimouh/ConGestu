@@ -34,7 +34,7 @@ function profilePage() {
                 <CircularProgressbar
                     value={progress}
                     maxValue={totalAnswers}
-                    text={`${progress / totalAnswers * 100}%`}
+                    text={`${parseInt(progress / totalAnswers * 100.0)}%`}
                     background={true}
                     styles={{
                         text: {
