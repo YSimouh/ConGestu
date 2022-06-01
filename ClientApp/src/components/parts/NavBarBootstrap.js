@@ -16,11 +16,13 @@ export default function Navigation() {
                             <Nav.Link href='/courses'>&nbsp;Cursus&nbsp;</Nav.Link>
                             <Nav.Link href='/translate'>&nbsp;Vertaalmachine&nbsp;</Nav.Link>
                             <Nav.Link href='/information'>&nbsp;Informatie&nbsp;</Nav.Link>
-                                <Nav.Link href='/login'>
-                                    <div className="logo-container" style={{ "margin-left": "10px", "margin-right": "10px" }}>
-                                        <i class="fa-solid fa-user fa-xl"></i>
-                                    </div>
-                                </Nav.Link>
+                            <Nav.Link href='/transcriber'>&nbsp;Transcriber&nbsp;</Nav.Link>
+                            <Nav.Link href='/login'>
+                                <div className="logo-container" style={{ "margin-left": "10px", "margin-right": "10px" }}>
+                                    <i class="fa-solid fa-user fa-xl"></i>
+                                </div>
+                            </Nav.Link>
+                            
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

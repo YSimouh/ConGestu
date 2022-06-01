@@ -12,6 +12,7 @@ import CourseLevel2 from './components/screens/CourseLevel2';
 import Login from './components/screens/Login';
 import createAccount from './components/screens/createAccount';
 import profilePage from './components/screens/profilePage';
+import Transcriber from './components/screens/Transcriber';
 
 
 function App  (){
@@ -26,11 +27,12 @@ function App  (){
           <Route exact path='/information' component={Information}/>
           <Route exact path='/levelholder' component={Levelholder}/>
           <Route exact path='/oefenen' component={Oefenen}/>
-                <Route exact path='/information' component={Information} />
-                <Route exact path='/CourseLevel2' component={CourseLevel2} />
-                <Route exact path='/login' component={Login} />
-                <Route exact path='/createAccount' component={createAccount} />
-                <Route path='/profile' component={profilePage} />
+          <Route exact path='/information' component={Information} />
+          <Route exact path='/CourseLevel2' component={CourseLevel2} />
+          <Route exact path='/login' component={Login} />
+          <Route exact path='/createAccount' component={createAccount} />
+          <Route path='/profile' component={profilePage} />
+          <Route path='/transcriber' component={Transcriber} />
         </Switch>
       </Router>
     );
