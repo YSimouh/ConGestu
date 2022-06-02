@@ -1,17 +1,26 @@
 import React from 'react';
-import { Form, Button, Dropdown, DropdownButton } from 'react-bootstrap';
+import { Form, Button, Dropdown, DropdownButton, InputGroup } from 'react-bootstrap';
 import '../design/translate.css';
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 import koekje from '../pictures/2eten-en-drinken/koekje.png'
 import koffie from '../pictures/2eten-en-drinken/koffie.png'
 import peer from '../pictures/2eten-en-drinken/peer.png'
 import melk from '../pictures/2eten-en-drinken/melk.png'
 import blij from '../pictures/3omgang/blij.png'
 import leuk from '../pictures/3omgang/leuk.png'
+import { MdKeyboardVoice,MdFiberManualRecord } from "react-icons/md";
+
+const SpraakHerkenning = window.SpeechRecognition || window.webkitSpeechRecognition;
+const mic = new SpraakHerkenning()
+
+mic.continuous=true
+mic.interimResults= true
+mic.lang='nl-NL'
 
 
 
 function Translate() {
+    const [listening,setlistening]=useState(false)
     const signList = ['koekje', 'koffie', 'peer', 'melk', 'blij', 'leuk', 'eten is op'];
     const [message, setMessage] = useState('');
   
@@ -20,6 +29,8 @@ function Translate() {
     };
   
     let handleClick = event => {
+      setlistening(!listening)
+      console.log('handling')
       event.preventDefault();
       document.getElementById('error-message-id').classList.remove('show');
       if(signList.includes(message)) {
@@ -38,6 +49,39 @@ function Translate() {
       }
     };
 
+    useEffect(()=>{
+      handlelisten()
+    },[listening])
+
+    const handlelisten = ()=>{
+      if(listening){
+        mic.start()
+        mic.onend=()=>{
+          console.log('continue...')
+          mic.start
+        }
+      }
+      else{
+        mic.stop()
+        mic.onend = ()=>{
+          console.log('stopped')
+        }
+      }
+      mic.onstart=()=>{
+        console.log('Mics on')
+      }     
+      mic.onresult= event => {
+        const transcript= Array.from(event.results)
+          .map(result=>result[0])
+          .map(result=>result.transcript)
+          .join('')
+        setMessage(transcript)
+        mic.onerror=event=>{
+          console.log(event.error)
+        }
+      }
+    }
+
 
   return (
     <div className='center'>
@@ -53,23 +97,14 @@ function Translate() {
       <div>
         <Form>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            {/* <Form.Label>
-              <DropdownButton id="dropdown-basic-button" variant="secondary" title="Selecteer een taal">
-                <Dropdown.Item href="#/action-1">Nederlands</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Nederlandse Gebarentaal</Dropdown.Item>
-              </DropdownButton>
-            </Form.Label> */}
-            <Form.Control onChange={handleChange} value={message} as="textarea" rows={4} />
-          </Form.Group>
-          {/* <Button className="language-switch-button" variant="primary">Wissel om</Button>{' '} */}
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            {/* <Form.Label>
-              <DropdownButton id="dropdown-basic-button" variant="secondary" title="Selecteer een taal">
-                <Dropdown.Item href="#/action-1">Nederlands</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Nederlandse Gebarentaal</Dropdown.Item>
-              </DropdownButton>
-            </Form.Label> */}
-            {/* <Form.Control as="textarea" rows={4} /> */}
+            <InputGroup>       
+              <InputGroup.Text>
+              {!listening?<MdKeyboardVoice size={40} fill='black' onClick={()=>setlistening(!listening)}/>:<MdFiberManualRecord size={40} fill='black' onClick={handleClick}/>}
+                {/* <MdKeyboardVoice size={40} fill='black' onClick={()=>setlistening(!listening)}/> */}
+                
+              </InputGroup.Text>
+              <Form.Control onChange={handleChange} value={message} as="textarea" rows={4} />
+            </InputGroup>
           </Form.Group>
         </Form>
         <Button onClick={handleClick} variant="primary">Vertaal</Button>{' '}

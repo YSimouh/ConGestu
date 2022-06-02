@@ -4,12 +4,25 @@
     margin: auto;
     text-align: center; */
 }
+.maincontainer{
+    width: 100%;
+    height: 100vh;
+}
+
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 body{
     background-image: linear-gradient(120deg,#e7e8ea, #6290c3);
+    /* background-image: url(../pictures/bg.jpg); */
     color: white;
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
+
+    
 }
 .center{
     text-align: center;
@@ -54,4 +67,15 @@ form button:hover{
 #welkom{
     color:black;
     font-weight: bold;
+}
+.content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
