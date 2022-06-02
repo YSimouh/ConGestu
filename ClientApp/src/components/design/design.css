@@ -17,7 +17,22 @@
   width: 90%;
   /* min-width: 719px; */
 }
-
+.WelcomeContainer {
+    background-color: #E6AF2E;
+    padding: 1rem;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    max-width: 100%;
+    border-radius: 25px;
+    width: 200px;
+    height: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
 .button {
   align-items: center;
   background-color: 

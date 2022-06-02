@@ -12,7 +12,7 @@ import CourseLevel2 from './components/screens/CourseLevel2';
 import Login from './components/screens/Login';
 import createAccount from './components/screens/createAccount';
 import profilePage from './components/screens/profilePage';
-
+import gesture from './components/screens/gesturescreen';
 
 function App  (){
     return (
@@ -31,6 +31,7 @@ function App  (){
                 <Route exact path='/login' component={Login} />
                 <Route exact path='/createAccount' component={createAccount} />
                 <Route path='/profile' component={profilePage} />
+                <Route path='/gesture' component={gesture} />
         </Switch>
       </Router>
     );
