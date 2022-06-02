@@ -9,6 +9,8 @@ import melk from '../pictures/2eten-en-drinken/melk.png'
 import blij from '../pictures/3omgang/blij.png'
 import leuk from '../pictures/3omgang/leuk.png'
 import { MdKeyboardVoice,MdFiberManualRecord } from "react-icons/md";
+import AR from '../screens/AR'
+
 
 const SpraakHerkenning = window.SpeechRecognition || window.webkitSpeechRecognition;
 const mic = new SpraakHerkenning()
@@ -85,6 +87,7 @@ function Translate() {
 
   return (
     <div className='center'>
+      <AR/>
       <div class="intro-container">
         <h1>Welkom op de vertaal pagina</h1>
         <p>
