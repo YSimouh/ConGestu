@@ -13,7 +13,7 @@ import Login from './components/screens/Login';
 import createAccount from './components/screens/createAccount';
 import profilePage from './components/screens/profilePage';
 import gesture from './components/screens/gesturescreen';
-import Transcriber from './components/screens/Transcriber';
+import transcriber from './components/screens/transcriber';
 
 
 function App  (){
@@ -34,7 +34,7 @@ function App  (){
           <Route exact path='/createAccount' component={createAccount} />
           <Route path='/profile' component={profilePage} />
           <Route path='/gesture' component={gesture} />
-          <Route exact path='/transcriber' component={Transcriber}/>
+          <Route exact path='/transcriber' component={transcriber}/>
 
         </Switch>
       </Router>
