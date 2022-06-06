@@ -13,6 +13,8 @@ import Login from './components/screens/Login';
 import createAccount from './components/screens/createAccount';
 import profilePage from './components/screens/profilePage';
 import gesture from './components/screens/gesturescreen';
+import Transcriber from './components/screens/transcriber';
+import Transcriber2 from './components/screens/transcriber2';
 
 function App  (){
     return (
@@ -26,12 +28,14 @@ function App  (){
           <Route exact path='/information' component={Information}/>
           <Route exact path='/levelholder' component={Levelholder}/>
           <Route exact path='/oefenen' component={Oefenen}/>
-                <Route exact path='/information' component={Information} />
-                <Route exact path='/CourseLevel2' component={CourseLevel2} />
-                <Route exact path='/login' component={Login} />
-                <Route exact path='/createAccount' component={createAccount} />
-                <Route path='/profile' component={profilePage} />
-                <Route path='/gesture' component={gesture} />
+          <Route exact path='/information' component={Information} />
+          <Route exact path='/CourseLevel2' component={CourseLevel2} />
+          <Route exact path='/login' component={Login} />
+          <Route exact path='/createAccount' component={createAccount} />
+          <Route path='/profile' component={profilePage} />
+          <Route path='/gesture' component={gesture} />
+          <Route exact path='/transcriber' component={Transcriber}/>
+          <Route exact path='/transcriber2' component={Transcriber2}/>
         </Switch>
       </Router>
     );
