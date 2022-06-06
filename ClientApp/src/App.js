@@ -13,8 +13,8 @@ import Login from './components/screens/Login';
 import createAccount from './components/screens/createAccount';
 import profilePage from './components/screens/profilePage';
 import gesture from './components/screens/gesturescreen';
-import Transcriber from './components/screens/transcriber';
-import Transcriber2 from './components/screens/transcriber2';
+import Transcriber from './components/screens/Transcriber';
+
 
 function App  (){
     return (
@@ -35,7 +35,7 @@ function App  (){
           <Route path='/profile' component={profilePage} />
           <Route path='/gesture' component={gesture} />
           <Route exact path='/transcriber' component={Transcriber}/>
-          <Route exact path='/transcriber2' component={Transcriber2}/>
+
         </Switch>
       </Router>
     );

@@ -32,6 +32,7 @@ export default function Navbar() {
               <li className="items"><Link to='/courses'>Cursus</Link></li>
               <li className="items"><Link to='/translate'> Vertaalmachine </Link></li>
               <li className="items"><Link to='/information'>Informatie</Link></li>
+              <li className="items"><Link to='/transcriber'>Transcriber</Link></li>
               </ul>
           )} 
       </ul>
