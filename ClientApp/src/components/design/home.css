@@ -79,3 +79,48 @@ form button:hover{
     align-items: center;
     color: white;
 }
+
+
+
+.hero-container{
+    display:flex;
+    justify-content: stretch;
+    width:100vw;
+    height:100vh;
+    margin-top:-50px;
+}
+
+.hero-partition {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+    color:white;
+    font-size:20px;
+    transition: .2s ease-in;
+    text-decoration:none;
+}
+
+.hero-partition.left {
+    background:hsla(241, 100%, 40%, 1);
+}
+
+.hero-partition.right {
+    background:hsla(0, 100%, 40%, 1);
+}
+
+.hero-partition:hover {
+    width:180%;
+    font-size:50px;
+    transition: .30s ease-out;
+    cursor:pointer;
+    color:white;
+}
+
+.hero-partition.left:hover {
+    background:hsla(241, 100%, 50%, 1);
+}
+
+.hero-partition.right:hover {
+    background:hsla(0, 100%, 50%, 1);
+}

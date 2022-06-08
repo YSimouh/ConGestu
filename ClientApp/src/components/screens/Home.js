@@ -30,24 +30,28 @@ function isLoggedIn() {
 
 function Home() {
     return (
-        <div className='center'>
+        // <div className='center'>
             
-            <h1 id="welkom">Welkom bij</h1>
+        //     <h1 id="welkom">Welkom bij</h1>
 
-            <img class="home-header-img" src = {logo}/>     
-                <div class="overlap-group">
-                  <h1>
-                    Begin met het leren <br/>van gebarentaal
-                    </h1>
-                    <Link to="/courses" style={{ textDecoration: 'none' }}>
-                    <button className="button">
-                        CURSUSSEN
-                    </button>
-                    </Link>         
-            </div>
-            <div style={{"justifyContent" : "center", "display" : "flex"}}>
-                {isLoggedIn()}
-            </div>
+        //     <img class="home-header-img" src = {logo}/>     
+        //         <div class="overlap-group">
+        //           <h1>
+        //             Begin met het leren <br/>van gebarentaal
+        //             </h1>
+        //             <Link to="/courses" style={{ textDecoration: 'none' }}>
+        //             <button className="button">
+        //                 CURSUSSEN
+        //             </button>
+        //             </Link>         
+        //     </div>
+        //     <div style={{"justifyContent" : "center", "display" : "flex"}}>
+        //         {isLoggedIn()}
+        //     </div>
+        // </div>
+        <div className="hero-container">
+            <Link to="/courses"class="hero-partition left">Leertraject</Link>
+            <Link to="/translate"class="hero-partition right">Vertaalmachine</Link>
         </div>
     )
 }

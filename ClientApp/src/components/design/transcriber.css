@@ -41,13 +41,13 @@ form {
     justify-content: center;
 }
 
-.translate-result-container .picture {
+/* .translate-result-container .picture {
     display:none;
-}
+} */
 
-.translate-result-container .picture.show {
+/* .translate-result-container .picture.show {
     display:block;
-}
+} */
 
 .error-message {
     display:none;
