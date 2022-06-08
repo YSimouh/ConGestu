@@ -16,7 +16,7 @@ const poseParameters = {
     pose15 : "x",
     pose16 : "y",
     pose17 : "z",
-    classifySpeed: 300,
+    classifySpeed: 1200,
     webcamWidth: 640,
     webcamHeight: 480,
     pose1Action: () => {
