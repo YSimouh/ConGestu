@@ -1,4 +1,4 @@
-.NavBarBootstrap{
+/* .NavBarBootstrap{
     background-color: #1d3461;
     color:white !important;
 }
@@ -7,6 +7,7 @@
     justify-content: center;
     padding-left: 10px
 }
+
 
 .nav-link {
     color: white !important;
@@ -26,5 +27,47 @@
 }
 .pos{
     margin: auto;
+} */
+
+
+
+
+
+
+
+ .navbar#navbar-yo .container {
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items:flex-end;
 }
 
+.navbar#navbar-yo .navbar-toggler {
+    color:white;
+    background:hsla(39, 100%, 50%, 1);
+    margin:0;
+    border-radius:2px;
+    box-shadow: 4px 6px hsla(9, 9%, 5%, 0.35);
+}
+
+.navbar#navbar-yo .navbar-toggler:hover, .navbar#navbar-yo .navbar-toggler:focus{
+    background:hsla(39, 100%, 50%, 1);
+    border:none;
+}
+
+.navbar#navbar-yo .navbar-collapse:not(.show) {
+    display:none;
+}
+
+.navbar#navbar-yo .navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+    padding:4px 12px;
+    background:hsla(39, 100%, 50%, 1);
+    border-radius:2px;
+    box-shadow: 4px 6px hsla(9, 9%, 5%, 0.35);
+}
+
+.navbar#navbar-yo .navbar-collapse .navbar-nav .nav-link {
+    text-align:right;
+    color:white;
+}

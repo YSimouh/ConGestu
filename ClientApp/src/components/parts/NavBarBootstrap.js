@@ -7,7 +7,8 @@ export default function Navigation() {
     return (
         <>
         <div className='pos'>
-            <Navbar className="NavBarBootstrap" collapseOnSelect fixed='top' expand='sm' >
+            {/* <Navbar className="NavBarBootstrap" collapseOnSelect fixed='top' expand='sm'> */}
+            <Navbar className="NavBarBootstrap" id="navbar-yo" collapseOnSelect fixed='top' expand={false} variant="dark">
                 <Container>
                     <Navbar.Toggle aria-controls='responsive-navbar-nav' />
                     <Navbar.Collapse id='responsive-navbar-nav'>
