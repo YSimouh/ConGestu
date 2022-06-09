@@ -2510,14 +2510,6 @@
     "normalize-path" "^3.0.0"
     "picomatch" "^2.0.4"
 
-"aphrodite@^0.5.0":
-  "integrity" "sha512-bPcR/68OdLg+16XDYAaKnlGJufxrbOw86ucElS7qHm7Y6ZNvMT/D/VDEEfodjFgfyRyoTeKmSaikULG92kSYvQ=="
-  "resolved" "https://registry.npmjs.org/aphrodite/-/aphrodite-0.5.0.tgz"
-  "version" "0.5.0"
-  dependencies:
-    "asap" "^2.0.3"
-    "inline-style-prefixer" "^2.0.0"
-
 "arg@^5.0.1":
   "integrity" "sha512-e0hDa9H2Z9AwFkk2qDlwhoMYE4eToKarchkQHovNdLTCYMHZHeRjI71crOh+dio4K6u1IcwubQqo79Ga4CyAQA=="
   "resolved" "https://registry.npmjs.org/arg/-/arg-5.0.1.tgz"
@@ -2617,7 +2609,7 @@
   "resolved" "https://registry.npmjs.org/arrify/-/arrify-2.0.1.tgz"
   "version" "2.0.1"
 
-"asap@^2.0.3", "asap@~2.0.3", "asap@~2.0.6":
+"asap@~2.0.3", "asap@~2.0.6":
   "integrity" "sha1-5QNHYR1+aQlDIIu9r+vLwvuGbUY="
   "resolved" "https://registry.npmjs.org/asap/-/asap-2.0.6.tgz"
   "version" "2.0.6"
@@ -2929,7 +2921,7 @@
   "resolved" "https://registry.npmjs.org/bootstrap/-/bootstrap-5.1.3.tgz"
   "version" "5.1.3"
 
-"bowser@^1.0.0", "bowser@^1.7.3":
+"bowser@^1.7.3":
   "integrity" "sha512-9IdMmj2KjigRq6oWhmwv1W36pDuA4STQZ8q6YO9um+x07xgYNCD3Oou+WP/3L1HNz7iqythGet3/p4wvc8AAwQ=="
   "resolved" "https://registry.npmjs.org/bowser/-/bowser-1.9.4.tgz"
   "version" "1.9.4"
@@ -4669,11 +4661,6 @@
     "signal-exit" "^3.0.3"
     "strip-final-newline" "^2.0.0"
 
-"exenv@^1.2.2":
-  "integrity" "sha512-Z+ktTxTwv9ILfgKCk32OX3n/doe+OcLTRtqK9pcL+JsP3J1/VW8Uvl4ZjLlKqeW4rzK4oesDOGMEMRIZqtP4Iw=="
-  "resolved" "https://registry.npmjs.org/exenv/-/exenv-1.2.2.tgz"
-  "version" "1.2.2"
-
 "exit@^0.1.2":
   "integrity" "sha1-BjJjj42HfMghB9MKD/8aF8uhzQw="
   "resolved" "https://registry.npmjs.org/exit/-/exit-0.1.2.tgz"
@@ -5482,7 +5469,7 @@
   "resolved" "https://registry.npmjs.org/human-signals/-/human-signals-2.1.0.tgz"
   "version" "2.1.0"
 
-"hyphenate-style-name@^1.0.1", "hyphenate-style-name@^1.0.2":
+"hyphenate-style-name@^1.0.2":
   "integrity" "sha512-ygGZLjmXfPHj+ZWh6LwbC37l43MhfztxetbFCoYTM2VjkIUpeHgSNn7QIyVFj7YQ1Wl9Cbw5sholVJPzWvC2MQ=="
   "resolved" "https://registry.npmjs.org/hyphenate-style-name/-/hyphenate-style-name-1.0.4.tgz"
   "version" "1.0.4"
@@ -5583,14 +5570,6 @@
   "integrity" "sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew=="
   "resolved" "https://registry.npmjs.org/ini/-/ini-1.3.8.tgz"
   "version" "1.3.8"
-
-"inline-style-prefixer@^2.0.0":
-  "integrity" "sha512-rlgoApaAAv66JeDFqGYaXwglnlxjyIr7RMaFZqJw4opT0WKnZVXhXMC9SAfuMpN7NELPaImUhJmOO3hAamSlfw=="
-  "resolved" "https://registry.npmjs.org/inline-style-prefixer/-/inline-style-prefixer-2.0.5.tgz"
-  "version" "2.0.5"
-  dependencies:
-    "bowser" "^1.0.0"
-    "hyphenate-style-name" "^1.0.1"
 
 "inline-style-prefixer@^3.0.6":
   "integrity" "sha512-ne8XIyyqkRaNJ1JfL1NYzNdCNxq+MCBQhC8NgOQlzNm2vv3XxlP0VSLQUbSRCF6KPEoveCVEpayHoHzcMyZsMQ=="
@@ -8187,7 +8166,7 @@
     "react-is" "^16.3.2"
     "warning" "^4.0.0"
 
-"prop-types@^15.0.0", "prop-types@^15.5.10", "prop-types@^15.5.8", "prop-types@^15.6.0", "prop-types@^15.6.1", "prop-types@^15.6.2", "prop-types@^15.7.2", "prop-types@^15.8.1":
+"prop-types@^15.0.0", "prop-types@^15.5.10", "prop-types@^15.5.8", "prop-types@^15.6.1", "prop-types@^15.6.2", "prop-types@^15.7.2", "prop-types@^15.8.1":
   "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   "version" "15.8.1"
@@ -8342,26 +8321,6 @@
     "strip-ansi" "^6.0.1"
     "text-table" "^0.2.0"
 
-"react-dom@^15.0 || ^16.0", "react-dom@>=15.0.0":
-  "integrity" "sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw=="
-  "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-16.14.0.tgz"
-  "version" "16.14.0"
-  dependencies:
-    "loose-envify" "^1.1.0"
-    "object-assign" "^4.1.1"
-    "prop-types" "^15.6.2"
-    "scheduler" "^0.19.1"
-
-"react-dom@^16.3.0":
-  "integrity" "sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw=="
-  "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-16.14.0.tgz"
-  "version" "16.14.0"
-  dependencies:
-    "loose-envify" "^1.1.0"
-    "object-assign" "^4.1.1"
-    "prop-types" "^15.6.2"
-    "scheduler" "^0.19.1"
-
 "react-dom@^17.0.1", "react-dom@^17.0.2", "react-dom@>=15.3.0", "react-dom@>=16", "react-dom@>=16.14.0", "react-dom@>=16.2.0", "react-dom@>=16.3.0", "react-dom@>=16.6.0":
   "integrity" "sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.2.tgz"
@@ -8376,28 +8335,10 @@
   "resolved" "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-6.0.10.tgz"
   "version" "6.0.10"
 
-"react-grid-gallery@^0.5.5":
-  "integrity" "sha512-DkKg2/Am+VZPDG39fazelTcsZSQrfM/YllnIcWToyUEfOZcrzHxUoqCziCkuTPmCuMbHnrjidBFuDbAFgvSnvQ=="
-  "resolved" "https://registry.npmjs.org/react-grid-gallery/-/react-grid-gallery-0.5.5.tgz"
-  "version" "0.5.5"
-  dependencies:
-    "prop-types" "^15.5.8"
-    "react-images" "^0.5.16"
-
 "react-icons@^4.4.0":
   "integrity" "sha512-fSbvHeVYo/B5/L4VhB7sBA1i2tS8MkT0Hb9t2H1AVPkwGfVHLJCqyr2Py9dKMxsyM63Eng1GkdZfbWj+Fmv8Rg=="
   "resolved" "https://registry.npmjs.org/react-icons/-/react-icons-4.4.0.tgz"
   "version" "4.4.0"
-
-"react-images@^0.5.16":
-  "integrity" "sha512-B3d4W1uFJj+m17K8S65iAyEJShKGBjPk7n7N1YsPiAydEm8mIq9a6CoeQFMY1d7N2QMs6FBCjT9vELyc5jP5JA=="
-  "resolved" "https://registry.npmjs.org/react-images/-/react-images-0.5.19.tgz"
-  "version" "0.5.19"
-  dependencies:
-    "aphrodite" "^0.5.0"
-    "prop-types" "^15.6.0"
-    "react-scrolllock" "^2.0.1"
-    "react-transition-group" "2"
 
 "react-is@^16.13.1", "react-is@^16.3.2", "react-is@^16.6.0", "react-is@^16.7.0":
   "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
@@ -8426,11 +8367,6 @@
     "prop-types" "^15.6.1"
     "typed-styles" "^0.0.7"
     "warning" "^4.0.2"
-
-"react-prop-toggle@^1.0.2":
-  "integrity" "sha512-JmerjAXs7qJ959+d0Ygt7Cb2+4fG+n3I2VXO6JO0AcAY1vkRN/JpZKAN67CMXY889xEJcfylmMPhzvf6nWO68Q=="
-  "resolved" "https://registry.npmjs.org/react-prop-toggle/-/react-prop-toggle-1.0.2.tgz"
-  "version" "1.0.2"
 
 "react-refresh@^0.11.0", "react-refresh@>=0.10.0 <1.0.0":
   "integrity" "sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A=="
@@ -8528,14 +8464,6 @@
   optionalDependencies:
     "fsevents" "^2.3.2"
 
-"react-scrolllock@^2.0.1":
-  "integrity" "sha512-Gzpu8+ulxdYcybAgJOFTXc70xs7SBZDQbZNpKzchZUgLCJKjz6lrgESx6LHHZgfELx1xYL4yHu3kYQGQPFas/g=="
-  "resolved" "https://registry.npmjs.org/react-scrolllock/-/react-scrolllock-2.0.7.tgz"
-  "version" "2.0.7"
-  dependencies:
-    "exenv" "^1.2.2"
-    "react-prop-toggle" "^1.0.2"
-
 "react-speech-recognition@^3.9.1":
   "integrity" "sha512-HzhHydSvLcpaCW7q9HZamNg4XQaKXEMGBT9rYP/rGhbwBRj6dgrCZsHcoV3Lr3WSDyFw0svXeoRzbG/cneFGnQ=="
   "resolved" "https://registry.npmjs.org/react-speech-recognition/-/react-speech-recognition-3.9.1.tgz"
@@ -8568,16 +8496,6 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react-transition-group@2":
-  "integrity" "sha512-+HzNTCHpeQyl4MJ/bdE0u6XRMe9+XG/+aL4mCxVN4DnPBQ0/5bfHWPDuOZUzYdMj94daZaZdCCc1Dzt9R/xSSg=="
-  "resolved" "https://registry.npmjs.org/react-transition-group/-/react-transition-group-2.9.0.tgz"
-  "version" "2.9.0"
-  dependencies:
-    "dom-helpers" "^3.4.0"
-    "loose-envify" "^1.4.0"
-    "prop-types" "^15.6.2"
-    "react-lifecycles-compat" "^3.0.4"
-
 "react-webcam@^5.2.1":
   "integrity" "sha512-Qqj14t68Ke1eoEYjFde+N48HtuIJg0ePIQRpFww9eZt5oBcDpe/l60h+m3VRFJAR5/E3dOhSU5R8EJEcdCq/Eg=="
   "resolved" "https://registry.npmjs.org/react-webcam/-/react-webcam-5.2.4.tgz"
@@ -8595,15 +8513,6 @@
   dependencies:
     "loose-envify" "^1.1.0"
     "object-assign" "^4.1.1"
-
-"react@^15.0 || ^16.0", "react@^16.14.0", "react@^16.3.0":
-  "integrity" "sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g=="
-  "resolved" "https://registry.npmjs.org/react/-/react-16.14.0.tgz"
-  "version" "16.14.0"
-  dependencies:
-    "loose-envify" "^1.1.0"
-    "object-assign" "^4.1.1"
-    "prop-types" "^15.6.2"
 
 "reactstrap@^8.9.0":
   "integrity" "sha512-StjLADa/12yMNjafrSs+UD7sZAGtKpLO9fZp++2Dj0IzJinqY7eQhXlM3nFf0q40YsIcLvQdFc9pKF8PF4f0Qg=="
@@ -8948,14 +8857,6 @@
   "version" "5.0.1"
   dependencies:
     "xmlchars" "^2.2.0"
-
-"scheduler@^0.19.1":
-  "integrity" "sha512-n/zwRWRYSUj0/3g/otKDRPMh6qv2SYMWNq85IEa8iZyAv8od9zDYpGSnpBEjNgcMNq6Scbu5KfIPxNF72R/2EA=="
-  "resolved" "https://registry.npmjs.org/scheduler/-/scheduler-0.19.1.tgz"
-  "version" "0.19.1"
-  dependencies:
-    "loose-envify" "^1.1.0"
-    "object-assign" "^4.1.1"
 
 "scheduler@^0.20.2":
   "integrity" "sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ=="
