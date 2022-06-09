@@ -1,13 +1,66 @@
-import React, { useRef, useEffect,useState } from 'react'
+import React, { useState,useRef,useEffect } from 'react';
+//import '../design/levels.css';
+import 'react-toastify/dist/ReactToastify.min.css';
+import { ToastContainer, Flip } from 'react-toastify';
+import { toast } from 'react-toastify';
+import {Link, useLocation} from "react-router-dom";
+import updateProgress from '../parts/updateProgress';
+import testGesture from '../Functions/testGesture';
+import '../design/camera.css'
 import * as Webcam from 'react-webcam';
 import * as ml5 from 'ml5';
 import { poseParameters } from '../parts/parameters'
+import {Oval} from 'react-loader-spinner'
+
 let brain;
 let inputs;
 let pose;
 
+export default function Level2holder(props) {
+	const location= useLocation();
+	const {questions}=location.state;
+	const [currentQuestion, setCurrentQuestion] = useState(0);
+	const [showScore, setShowScore] = useState(false);
+	const [score, setScore] = useState(0);
+    const [loading,setloading]= useState(true);
+	const handleAnswerOptionClick = (isCorrect) => {
+		if (isCorrect) {
+			setScore(score + 1);
+			updateProgress(1, score);
+		}
 
-export default function testGesture() {
+		const nextQuestion = currentQuestion + 1;
+		if (nextQuestion < questions.length) {
+			setCurrentQuestion(nextQuestion);
+		} else {
+			setShowScore(true);
+		}
+		if(isCorrect){
+			return toast.success("Correct!", {
+				position: "top-center",
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				});
+			
+		}
+		else{
+			return toast.error('Fout!', {
+				position: "top-center",
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				});
+		};
+	};
+    const handleUserMedia = () => {
+        setloading(false);
+      }
+    let showcaption=props.showcaption
     let working = false;
     const webcamRef = useRef(null);
     const [gest,setgest] = useState('')
@@ -168,17 +221,86 @@ export default function testGesture() {
             }
         }
     }
+	return (
+		<>
+		<ToastContainer
+          toastStyle={{ backgroundColor: "black" }}
+          position="top-center"
+          transition={Flip}
+          autoClose={900}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeButton={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
+		<div>
+		<div className='app'>
+			{showScore ? (
+				<div className='score-section'>
+					U heeft {score} van de {questions.length} vragen goed!
+				</div>
+			) : (
+				<>
+					<div className='question-section'>
+						<div className='question-count'>
+							<span>Vraag {currentQuestion + 1}</span>/{questions.length}
+						</div>
+						<div className='question-text'>{questions[currentQuestion].questionText}</div>
+						<div className='question-count'>
+                            <span>{questions[currentQuestion].answerOptions.filter(obj=>{return obj.isCorrect==true})[0].answerText}</span>
+                        </div>
+					</div>
+					<div className='answer-section'>
+                            {loading &&                         
+                            <div className='loaderholder'>
+                                 <Oval
+                                    ariaLabel="loading-indicator"
+                                    height={120}
+                                    width={120}
+                                    strokeWidth={4}
+                                    strokeWidthSecondary={4}
+                                    color="#E6AF2E"
+                                    secondaryColor="rgba(52, 52, 52, 0.8)"
+                                    />
+                            </div>
+                                            }
+                        <div className='cameradiv'>
+                        <div className='gesture_container'>
+                              
+                            <Webcam ref={webcamRef}
+                                onUserMedia={handleUserMedia}
+                                audio={false}
+                                mirrored={true}
+                                style={loading?{}:{
+                                    width: poseParameters.webcamWidth,
+                                    height: poseParameters.webcamHeight,
+                                }} />
+                                {!gest=='' ? 
+                                <div className='transcriptbox'>
+                                        {gest}
+                                </div> : <></>}
+                                </div>
+                        </div>
+                        <button className='buttons' onClick={() => handleAnswerOptionClick(false)}>Overslaan</button>
+                       
+						{/* {questions[currentQuestion].answerOptions.map((answerOption) => (
+							<div>
+							<button className='buttons' onClick={() => handleAnswerOptionClick(true)}>{answerOption.answerText}</button>
+							
+							</div>
+						))} */}
+                        {'Letter '+gest==questions[currentQuestion].answerOptions.filter(obj=>{return obj.isCorrect==true})[0].answerText  ? handleAnswerOptionClick(true):<></>}
+					</div>
+				</>
+			)}
+		</div>
+		</div>
 
-    return (
-        <div className='gesture_container'>
-            <Webcam ref={webcamRef}
-                audio={false}
-                mirrored={true}
-                style={{
-                    width: poseParameters.webcamWidth,
-                    height: poseParameters.webcamHeight,
-                }} />
-        </div>
-    );
+		</>
+		
+	);
 }
-

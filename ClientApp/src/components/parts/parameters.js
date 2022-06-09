@@ -21,55 +21,71 @@ const poseParameters = {
     webcamHeight: 480,
 	pose1Action: () => {
 		console.log("a is working");
+		return 'A'
 	},
 		pose2Action: () => {
 		console.log("b is working");
+		return 'B'
 	},
 		pose3Action: () => {
 		console.log("c is working");
+		return 'C'
 	},
 		pose4Action: () => {
 		console.log("d is working");
+		return 'D'
 	},
 		pose5Action: () => {
 		console.log("e is working");
+		return 'E'
 	},
 		pose6Action: () => {
 		console.log("f is working");
+		return 'F'
 	},
 		pose7Action: () => {
 		console.log("g is working");
+		return 'G'
 	},
 		pose8Action: () => {
 		console.log("h is working");
+		return 'H'
 	},
 		pose9Action: () => {
 		console.log("o is working");
+		return 'O'
 	},
 		pose10Action: () => {
 		console.log("q is working");
+		return 'Q'
 	},
 		pose11Action: () => {
-		setgest('R')
 		console.log("r is working");
+		return 'R'
 	},
 		pose12Action: () => {
 		console.log("s is working");
+		return 'S'
 	},
 		pose13Action: () => {
 		console.log("u is working");
+		return 'U'
 	},
 		pose14Action: () => {
 		console.log("v is working");
+		return 'V'
 	},
 	pose15Action: () => {
 		console.log("x is working");
+		return 'X'
 	},
 		pose16Action: () => {
 		console.log("y is working");
+		return 'Y'
 	},
 		pose17Action: () => {
 		console.log("z is working");
+		return 'Z'
 	}
 }
 
