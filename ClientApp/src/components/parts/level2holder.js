@@ -24,7 +24,8 @@ export default function Level2holder(props) {
 	const [score, setScore] = useState(0);
     const [loading,setloading]= useState(true);
 	const handleAnswerOptionClick = (isCorrect) => {
-		if (isCorrect) {
+		setgest('')
+        if (isCorrect) {
 			setScore(score + 1);
 			updateProgress(1, score);
 		}

@@ -2,11 +2,16 @@ import React from 'react';
 import {useState,useEffect} from 'react';
 import { Form, Button, Dropdown, DropdownButton, InputGroup } from 'react-bootstrap';
 import '../design/transcriber.css';
-import { MdKeyboardVoice,MdFiberManualRecord } from "react-icons/md";
+import { MdKeyboardVoice,MdFiberManualRecord,MdFormatSize } from "react-icons/md";
+import Slider from 'rc-slider'
+import Range from 'rc-slider'
+import 'rc-slider/assets/index.css';
+// import { ColorPicker, useColor } from "react-color-palette";
+// import "react-color-palette/lib/css/styles.css";
+import {BlockPicker} from 'react-color' 
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
 const mic = new SpeechRecognition()
-
 mic.continuous = true
 mic.interimResults = true
 mic.lang='nl-NL';
@@ -15,6 +20,10 @@ function transcriber() {
   const [isListening, setIsListening] = useState(false)
   const [note, setNote] = useState(null)
   const [savedNotes, setSavedNotes] = useState([])
+  const [size,setsize]= useState(16)
+  const [color,setcolor]=useState('#000000')
+  console.log(color)
+  //const [color, setColor] = useColor("hex", "#121212");
 
   useEffect(() => {
     handleListen()
@@ -77,12 +86,34 @@ function transcriber() {
           </Form.Group>
         </Form>
         </div>
+        <div className='Changecontainer'>
+          <div className='rowcontainer'>
+            <MdFormatSize size={40} fill='black'/>
+            <Slider
+              defaultValue={16}
+              min={10}
+              max={50}
+              onChange={(value) => {
+                setsize(value)
+              }}
+              handleStyle={{
+                borderColor: '#3F88C5',
+                backgroundColor: '#1D3461',
+              }}
+              />
+          </div>
+        </div>
         <div className="box">
-          <h2>Opnames</h2>
+          {/* <h2>Opnames</h2> */}
           {savedNotes.map(n => (
-            <p key={n}>{n}</p>
+            <p style={{color:color,paddingBottom:15,fontSize:size}} key={n}>{n}</p>
           ))}
         </div>
+        <BlockPicker
+          color={color}
+          onChangeComplete={(color)=>setcolor(color.hex)}
+          colors={['#000000', '#F47373', '#697689', '#37D67A', '#2CCCE4', '#555555', '#dce775', '#ff8a65', '#ba68c8']}
+          />
       </div>
     </>
   )

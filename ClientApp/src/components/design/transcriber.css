@@ -56,3 +56,18 @@ form {
 .error-message.show {
     display:block;
 }
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Changecontainer{
+    width: 220px;
+}
+.rowcontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
