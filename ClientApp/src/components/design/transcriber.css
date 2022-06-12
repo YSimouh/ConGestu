@@ -67,7 +67,8 @@ form {
 }
 .rowcontainer{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
+    margin-bottom: 5px;
 }

@@ -9,7 +9,9 @@ import 'rc-slider/assets/index.css';
 // import { ColorPicker, useColor } from "react-color-palette";
 // import "react-color-palette/lib/css/styles.css";
 import {BlockPicker} from 'react-color' 
-
+import {AwesomeButton,AwesomeButtonProgress,AwesomeButtonSocial,} from 'react-awesome-button';
+import styles from '../design/buttondesign.css'
+//import 'react-awesome-button/dist/themes/theme-rickiest.css';
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
 const mic = new SpeechRecognition()
 mic.continuous = true
@@ -68,25 +70,23 @@ function transcriber() {
     <>
       <h1>Spraak naar tekst</h1>
       <div className="container">
-        <div className='knoppen'>
-          <Button onClick={() => setIsListening(prevState => !prevState)}>
-            Opnemen
-          </Button>
-          <Button onClick={handleSaveNote} disabled={!note}>
-            Opslaan
-          </Button>
-
-        </div>
         <div className="box">
           <Form>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <InputGroup>       
+            <InputGroup>
+            <InputGroup.Text>
+              {!isListening?<MdKeyboardVoice size={40} fill='black' onClick={()=>setIsListening(!isListening)}/>:<MdFiberManualRecord size={40} fill='black' onClick={()=>setIsListening(!isListening)}/>}                
+              </InputGroup.Text>       
             <Form.Control value={note} as="textarea" rows={4} />
             </InputGroup>
           </Form.Group>
         </Form>
         </div>
         <div className='Changecontainer'>
+          <div className='rowcontainer'>
+            <AwesomeButton   onPress={()=>handleSaveNote()} size='small' type="primary">Opslaan</AwesomeButton>
+            <AwesomeButton   onPress={()=>setSavedNotes([])} size='small' type={savedNotes==0 ? "placeholder":"primary"}>{savedNotes==0 ? '':"Reset"}</AwesomeButton>
+          </div>
           <div className='rowcontainer'>
             <MdFormatSize size={40} fill='black'/>
             <Slider
