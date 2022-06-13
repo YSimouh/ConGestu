@@ -6,15 +6,15 @@ import '../design/CardInfo.css'
 function ReadMore({children , number = 100}){
     const text = children;
     const [isShow, setIsShowLess] = useState(true);
-    const result = isShow ? text.slice(0,210) : text;
+    const result = isShow ? text.slice(0,210).concat(" ...") : text;
     function toggleIsShow(){
         setIsShowLess(!isShow);
     }
     return (
         <div>
-            {result}
+            <div className='resultaat'>{result}</div>
             <button className='btn-read' onClick={toggleIsShow}>
-            {isShow ? '>>>Read More' : '<<<Read Less'}
+            {isShow ? '>>>Lees meer' : '<<<Inklappen'}
             </button>
         </div>
             
