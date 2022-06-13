@@ -1,5 +1,6 @@
 ﻿import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
+import {Link} from "react-router-dom";
 import '../design/NavBarBootstrap.css';
 import  logo from '../pictures/logo-transparant.png';
 export default function Navigation() {
@@ -9,13 +10,14 @@ export default function Navigation() {
         <div className='pos'>
             <Navbar className="NavBarBootstrap" collapseOnSelect fixed='top' expand='sm' >
             {/* <h2 className='h2logo'>ConGestu</h2> */}
-            <img class="home-logo-img" src = {logo}/> 
+            {/* <img class="home-logo-img" src = {logo}/>  */}
+            <Link to="/" className="home-header-logo"><img class="home-logo-img" src = {logo}/></Link>
                 <Container>
                     
                     <Navbar.Toggle aria-controls='responsive-navbar-nav' />
                     <Navbar.Collapse id='responsive-navbar-nav'>
                         <Nav >
-                            <Nav.Link href='/'><i class="fa-solid fa-house fa-xl"></i></Nav.Link>
+                            {/* <Nav.Link href='/'><i class="fa-solid fa-house fa-xl"></i></Nav.Link> */}
                             <Nav.Link href='/login'> <i class="fa-solid fa-user fa-xl"></i>
                                     {/* <div className="logo-container" style={{ "margin-left": "10px", "margin-right": "10px" }}>
                                         <i class="fa-solid fa-user fa-xl"></i>

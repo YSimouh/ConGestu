@@ -18,7 +18,7 @@ body{
 
     
     /* background-size: 680px 260px; */
-    width:630px;
+    /* width:630px; */
     min-width:50px;
     height: 300px;
     border-radius: 10px;
@@ -51,10 +51,10 @@ body{
     border-top-right-radius: 50px
 } */
 .c-Home:hover{
-    transform:scale(1.1);
+    /* transform:scale(1.1); */
     box-shadow: 0px 0px 15px 0px;
     background-color: #1d3461;
-    font-size: 20px;
+    /* font-size: 20px; */
     /* background-image: url(../pictures/logo-transparant.png); */
     background-repeat: no-repeat;
     background-size: 150px;
@@ -65,6 +65,8 @@ body{
 .c-content{
     margin: 1rem;
     margin-top: 0.3rem;
+    display:flex;
+    flex-direction:column;
 }
 .cHome-title{
     font-weight:bolder;
@@ -76,10 +78,11 @@ body{
 
 .cHome-button{
     text-align: center;
-    margin-top: 60px;
-    /* align-items: center;
+    /* margin-top: 60px; */
+    height: 100%;
     display: flex;
-    justify-content:center; */
+    justify-content: center;
+    align-items: flex-end;
 }
 /* *{
     box-sizing: border-box;

@@ -1,11 +1,23 @@
 .NavBarBootstrap{
     background-color: #1d3461;
     color:white !important;
+    min-height:90px;
 }
 
 #responsive-navbar-nav {
     justify-content: center;
     padding-left: 10px
+}
+
+nav.navbar .container {
+    justify-content: flex-end;
+}
+
+.home-header-logo {
+    position:absolute;
+    top:21px;
+    left:10px;
+    cursor:pointer;
 }
 
 .home-logo-img{

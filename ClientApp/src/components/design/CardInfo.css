@@ -20,11 +20,12 @@
     color: #1d3461;
 }
 
-.image-container{
+.image-container-info{
     width:100%;
+    height:200px;
 }
 
-.image-container img{
+.image-container-info img{
     overflow:hidden;
     height:200px;
     width:100%;
