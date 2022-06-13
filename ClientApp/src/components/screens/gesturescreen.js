@@ -286,7 +286,7 @@ function gesturescreen() {
     }
 
     return (
-        <div className="oefen_screen">
+        <div className="oefenGesture_screen">
             <div className="oefen_afbeeldingen" style={{"maxWidth" : "50%"}}>
                 <div class="oefen_screen_container">
 	                <div class="top">
@@ -327,7 +327,7 @@ function gesturescreen() {
                     </div>
                 </div>
             </div>
-		    <div className="gesture_container">
+		    <div className="oefengesture_container">
                 {testGesture()}
                 <div className="question_container">
                     <div className="vraag_container">
