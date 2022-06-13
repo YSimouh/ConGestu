@@ -39,7 +39,7 @@ function Card({title,body, button}) {
                         
                         <Card
                             title='Cursus'
-                            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmas, Lorem ipsum dolor sit amet, "
+                            body="Leer gebarentaal met een interactieve cursus!"
                             button={ <Link to="/courses" style={{ textDecoration: 'none' }}>
                                 <button className="button">
                                     Start
@@ -52,7 +52,7 @@ function Card({title,body, button}) {
                     <Col>
                     <Card
                         title='Vertaalmachine'
-                        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmas, Lorem ipsum dolor sit amet, "
+                        body="Vertaal tekst of spraak naar gebarentaal"
                         button={
                             <Link to="/translate" style={{ textDecoration: 'none' }}>
                                 <button className="button">
@@ -64,8 +64,8 @@ function Card({title,body, button}) {
                 <Row>
                     <Col>
                     <Card
-                        title='Title'
-                        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmas, Lorem ipsum dolor sit amet, "
+                        title='Transcriptor'
+                        body="Gebruik een transcriptor om spraak op te nemen en op te slaan"
                         button={
                             <Link to="/login" style={{ textDecoration: 'none' }}>
                                 <button className="button">
@@ -77,7 +77,7 @@ function Card({title,body, button}) {
                     <Col>
                     <Card
                         title='Informatie'
-                        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmas, Lorem ipsum dolor sit amet, "
+                        body="Kom meer te weten over gebarentaal en communicatie met doven"
                         button={ 
                             <Link to="/information" style={{ textDecoration: 'none' }}>
                                 <button className="button">
