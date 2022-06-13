@@ -15,11 +15,10 @@ body {
     display: flex;
   }
   body {
-    background-color: #7cc6fe;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
   }
   
   .app {
@@ -74,6 +73,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
   }
   
   
@@ -90,6 +90,7 @@ body {
     border: 3px solid #234668;
     cursor: pointer;
   }
+
   
   .correct {
     background-color: #2f922f;

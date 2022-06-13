@@ -8,7 +8,7 @@ export default function Cursusoption(props){
             <div class="holder">
                 <h1>
                     {props.header} 
-                </h1>
+                </h1> 
                 <p>
                     {props.text}
                 </p>
@@ -16,7 +16,11 @@ export default function Cursusoption(props){
                     <Link to={{
                         pathname:props.oefenlink,
                         state:{
-                        questions:props.questions 
+                        questions:props.questions,
+                        path:props.path,
+                        signs:props.signs,
+                        syntax: props.syntax,
+                        text: props.oefentext
                         }
                     }}  style={{ textDecoration: 'none' }}>
                     <button class="oefenen">

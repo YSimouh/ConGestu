@@ -46,7 +46,7 @@ function createAccount() {
                 <form onSubmit={handleAccount}>
                     <div className="input-container">
                         <label>Gebruikersnaam</label>
-                        <input type="text" name="name" value={state.name} onChange={handleChange} />
+                        <input type="username" name="name" value={state.name} onChange={handleChange} />
                     </div>
                     <div className="input-container">
                         <label>Wachtwoord</label>

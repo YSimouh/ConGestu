@@ -12,7 +12,10 @@ import CourseLevel2 from './components/screens/CourseLevel2';
 import Login from './components/screens/Login';
 import createAccount from './components/screens/createAccount';
 import profilePage from './components/screens/profilePage';
-
+import gesture from './components/screens/gesturescreen';
+import transcriber from './components/screens/transcriber';
+import Showlevels from './components/parts/showlevels';
+import Level2holder from './components/parts/level2holder';
 
 function App  (){
     return (
@@ -25,12 +28,17 @@ function App  (){
           <Route exact path='/courses' component={Courses}/>
           <Route exact path='/information' component={Information}/>
           <Route exact path='/levelholder' component={Levelholder}/>
+          <Route exact path='/level2holder' component={Level2holder}/>
           <Route exact path='/oefenen' component={Oefenen}/>
-                <Route exact path='/information' component={Information} />
-                <Route exact path='/CourseLevel2' component={CourseLevel2} />
-                <Route exact path='/login' component={Login} />
-                <Route exact path='/createAccount' component={createAccount} />
-                <Route path='/profile' component={profilePage} />
+          <Route exact path='/information' component={Information} />
+          <Route exact path='/CourseLevel2' component={CourseLevel2} />
+          <Route exact path='/login' component={Login} />
+          <Route exact path='/createAccount' component={createAccount} />
+          <Route path='/profile' component={profilePage} />
+          <Route path='/gesture' component={gesture} />
+          <Route exact path='/transcriber' component={transcriber}/>
+          <Route exact path='/showlevels' component={Showlevels}/>
+
         </Switch>
       </Router>
     );

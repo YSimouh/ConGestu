@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Redirect } from 'react-router';
 import "../design/loginStyle.css";
-import updateProgress from "../parts/updateProgress";
 
 function allUsers() {
 
@@ -15,7 +14,24 @@ function allUsers() {
     }
     return values;
 }
+function alreadyLoggedIn() {
 
+    if (localStorage.getItem("currentUser") === null) {
+        return;
+    }
+    else {
+        let currentUser = localStorage.getItem("currentUser");
+
+        currentUser = JSON.parse(currentUser);
+        if (currentUser.username != "") {
+            return <Redirect to={"/profile/" + currentUser.username} />
+        }
+        else {
+            return;
+        }
+    }
+
+}
 function Login() {
     // Create account redirect
 
@@ -72,6 +88,7 @@ function Login() {
 
                 const currentUser = JSON.parse(window.localStorage.getItem(profile));
 
+                //set current user to logged in user
                 const key = "currentUser";
                 const user = {
                     username: currentUser.username,
@@ -100,7 +117,7 @@ function Login() {
             <form onSubmit={handleSubmit}>
                 <div className="input-container">
                     <label className="label">Gebruiksnaam</label>
-                    <input type="text" name="uname" required />
+                    <input type="username" name="uname" required />
                     {renderErrorMessage("uname")}
                 </div>
                 <div className="input-container">
@@ -116,7 +133,9 @@ function Login() {
     );
 
     return (
+        
         <div className="loginPage">
+            {alreadyLoggedIn()}
             <div className="login-form">
                 <div className="title">Inloggen</div>
                 {isSubmitted ? <div>Gebruiker is ingelogd!</div> : renderForm}
