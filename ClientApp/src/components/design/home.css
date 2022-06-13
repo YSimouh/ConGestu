@@ -54,12 +54,10 @@ body{
     /* transform:scale(1.1); */
     box-shadow: 0px 0px 15px 0px;
     background-color: #1d3461;
-    /* font-size: 20px; */
-    /* background-image: url(../pictures/logo-transparant.png); */
+   
     background-repeat: no-repeat;
     background-size: 150px;
 
-    
 }
 
 .c-content{
