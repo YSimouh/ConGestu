@@ -8,6 +8,10 @@
     padding-left: 10px
 }
 
+.home-logo-img{
+    width:200px;
+    height:50px;
+}
 .nav-link {
     color: white !important;
     font-weight: bold;
