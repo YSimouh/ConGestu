@@ -39,22 +39,22 @@ function Contact() {
           <Col>
             <form className='contact-form'>
               <Row>
-                <Col className='form-group'>
+                <Row className='form-group'>
                   <input className='form-control'
                   id="name"
                   name='name'
                   placeholder="Name"
                   type="text"
                   />
-                </Col>
-                <Col className='form-group'>
+                </Row>
+                <Row className='form-group'>
                   <input className='form-control'
                   id="email"
                   name='email'
                   placeholder="Email"
                   type="email"
                   />
-                </Col>
+                </Row>
               </Row>
 
             </form>

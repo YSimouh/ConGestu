@@ -24,8 +24,13 @@ function ReadMore({children , number = 100}){
 function CardInfo({title,imageUrl,body}) {
   return (
     <div className='card-container'>
-        <div className='image-container'>
-            <img src={imageUrl} alt=''/>
+        <div className='image-container-info'
+        style={{
+            backgroundImage: 'url('+imageUrl+')',
+            backgroundSize: "cover",
+            }}
+        >
+            {/* <img src={imageUrl} alt=''/> */}
         </div>
         <div className='card-content'>
             <div className='card-title'>
