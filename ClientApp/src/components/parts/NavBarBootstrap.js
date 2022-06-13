@@ -23,10 +23,10 @@ export default function Navigation() {
                                         <i class="fa-solid fa-user fa-xl"></i>
                                     </div> */}
                                 </Nav.Link>
-                            <Nav.Link href='/courses'><i class="fa-solid fa-hands-asl-interpreting fa-xl"></i></Nav.Link>
+                            <Nav.Link href='/courses'><i class="fa-solid fa-book fa-xl"></i></Nav.Link>
                             <Nav.Link href='/translate'><i class="fa-solid fa-language fa-xl"></i></Nav.Link>
+                            <Nav.Link href='/transcriber'><i class="fa-solid fa-pen-alt fa-xl"></i></Nav.Link>    
                             <Nav.Link href='/information'><i class="fa-solid fa-circle-info fa-xl"></i></Nav.Link>
-                                
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

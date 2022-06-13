@@ -56,7 +56,7 @@ function Card({title,body, button}) {
                         button={
                             <Link to="/translate" style={{ textDecoration: 'none' }}>
                                 <button className="button">
-                                    start
+                                    Start
                                 </button>
                             </Link>}               />
                     </Col>
@@ -67,9 +67,9 @@ function Card({title,body, button}) {
                         title='Transcriptor'
                         body="Gebruik een transcriptor om spraak op te nemen en op te slaan"
                         button={
-                            <Link to="/login" style={{ textDecoration: 'none' }}>
+                            <Link to="/transcriber" style={{ textDecoration: 'none' }}>
                                 <button className="button">
-                                    start
+                                    Start
                                 </button>
                             </Link>}                         
                     />
@@ -81,7 +81,7 @@ function Card({title,body, button}) {
                         button={ 
                             <Link to="/information" style={{ textDecoration: 'none' }}>
                                 <button className="button">
-                                    start
+                                    Start
                                 </button>
                             </Link>}                          />  
                     </Col>
