@@ -17,7 +17,6 @@ import u from '../pictures/sign/U.png';
 import v from '../pictures/sign/V.png';
 import x from '../pictures/sign/X.png';
 import y from '../pictures/sign/Y.png';
-import z from '../pictures/sign/Z.png';
 import { useState } from 'react';
 import { poseParameters } from '../parts/parameters';
 
@@ -25,150 +24,271 @@ function gesturescreen() {
 
     const [currentGesture, setCurrentGesture] = useState('');
     const [answer, setAnswer] = useState(null);
+    const [stopCheck, setStopCheck] = useState(false);
+
+    function refresh() {
+        setAnswer(null);
+        setCurrentGesture('');
+        setStopCheck(false);
+        return;
+    }
+
+    function checkAnswer() {
+        if (answer == null) {
+            return null
+        }
+        else {
+            return  answer ? <div className = "correctAnswer">Correct!</div> : <div className="incorrectAnswer">Incorrect!</div>
+        }
+        
+    }
+    poseParameters.classifySpeed = 500
 
     poseParameters.pose1Action = () => {
-        if (currentGesture == poseParameters.pose1) {
-            setAnswer(true);
+        if (stopCheck == true) {
+            return;
         }
         else {
-            setAnswer(false);
+            if (currentGesture == poseParameters.pose1) {
+                setAnswer(true);
+                setStopCheck(true);
+            }
+            else {
+                setAnswer(false);
+            }
         }
+
     }
     poseParameters.pose2Action = () => {
-        if (currentGesture == poseParameters.pose2) {
-            setAnswer(true);
+        if (stopCheck == true) {
+            return;
         }
         else {
-            setAnswer(false);
+            if (currentGesture == poseParameters.pose2) {
+                setAnswer(true);
+                setStopCheck(true);
+            }
+            else {
+                setAnswer(false);
+            }
         }
+
     }
     poseParameters.pose3Action = () => {
-        if (currentGesture == poseParameters.pose3) {
-            setAnswer(true);
+        if (stopCheck == true) {
+            return;
         }
         else {
-            setAnswer(false);
+            if (currentGesture == poseParameters.pose3) {
+                setAnswer(true);
+                setStopCheck(true);
+            }
+            else {
+                setAnswer(false);
+            }
         }
+
     }
     poseParameters.pose4Action = () => {
-        if (currentGesture == poseParameters.pose4) {
-            setAnswer(true);
+        if (stopCheck == true) {
+            return;
         }
         else {
-            setAnswer(false);
+            if (currentGesture == poseParameters.pose4) {
+                setAnswer(true);
+                setStopCheck(true);
+            }
+            else {
+                setAnswer(false);
+            }
         }
+
     }
     poseParameters.pose5Action = () => {
-        if (currentGesture == poseParameters.pose5) {
-            setAnswer(true);
+        if (stopCheck == true) {
+            return;
         }
         else {
-            setAnswer(false);
+            if (currentGesture == poseParameters.pose5) {
+                setAnswer(true);
+                setStopCheck(true);
+            }
+            else {
+                setAnswer(false);
+            }
         }
+
     }
     poseParameters.pose6Action = () => {
-        if (currentGesture == poseParameters.pose6) {
-            setAnswer(true);
+        if (stopCheck == true) {
+            return;
         }
         else {
-            setAnswer(false);
+            if (currentGesture == poseParameters.pose6) {
+                setAnswer(true);
+                setStopCheck(true);
+            }
+            else {
+                setAnswer(false);
+            }
         }
+
     }
     poseParameters.pose7Action = () => {
-        if (currentGesture == poseParameters.pose7) {
-            setAnswer(true);
+        if (stopCheck == true) {
+            return;
         }
         else {
-            setAnswer(false);
+            if (currentGesture == poseParameters.pose7) {
+                setAnswer(true);
+                setStopCheck(true);
+            }
+            else {
+                setAnswer(false);
+            }
         }
+
     }
     poseParameters.pose8Action = () => {
-        if (currentGesture == poseParameters.pose8) {
-            setAnswer(true);
+        if (stopCheck == true) {
+            return;
         }
         else {
-            setAnswer(false);
+            if (currentGesture == poseParameters.pose8) {
+                setAnswer(true);
+                setStopCheck(true);
+            }
+            else {
+                setAnswer(false);
+            }
         }
+
     }
     poseParameters.pose9Action = () => {
-        if (currentGesture == poseParameters.pose9) {
-            setAnswer(true);
+        if (stopCheck == true) {
+            return;
         }
         else {
-            setAnswer(false);
+            if (currentGesture == poseParameters.pose9) {
+                setAnswer(true);
+                setStopCheck(true);
+            }
+            else {
+                setAnswer(false);
+            }
         }
+
     }
     poseParameters.pose10Action = () => {
-        if (currentGesture == poseParameters.pose10) {
-            setAnswer(true);
+        if (stopCheck == true) {
+            return;
         }
         else {
-            setAnswer(false);
+            if (currentGesture == poseParameters.pose10) {
+                setAnswer(true);
+                setStopCheck(true);
+            }
+            else {
+                setAnswer(false);
+            }
         }
+
     }
     poseParameters.pose11Action = () => {
-        if (currentGesture == poseParameters.pose11) {
-            setAnswer(true);
+        if (stopCheck == true) {
+            return;
         }
         else {
-            setAnswer(false);
+            if (currentGesture == poseParameters.pose11) {
+                setAnswer(true);
+                setStopCheck(true);
+            }
+            else {
+                setAnswer(false);
+            }
         }
+
     }
     poseParameters.pose12Action = () => {
-        if (currentGesture == poseParameters.pose12) {
-            setAnswer(true);
+        if (stopCheck == true) {
+            return;
         }
         else {
-            setAnswer(false);
+            if (currentGesture == poseParameters.pose12) {
+                setAnswer(true);
+                setStopCheck(true);
+            }
+            else {
+                setAnswer(false);
+            }
         }
+
     }
     poseParameters.pose13Action = () => {
-        if (currentGesture == poseParameters.pose13) {
-            setAnswer(true);
+        if (stopCheck == true) {
+            return;
         }
         else {
-            setAnswer(false);
+            if (currentGesture == poseParameters.pose13) {
+                setAnswer(true);
+                setStopCheck(true);
+            }
+            else {
+                setAnswer(false);
+            }
         }
+
     }
     poseParameters.pose14Action = () => {
-        if (currentGesture == poseParameters.pose14) {
-            setAnswer(true);
+        if (stopCheck == true) {
+            return;
         }
         else {
-            setAnswer(false);
+            if (currentGesture == poseParameters.pose14) {
+                setAnswer(true);
+                setStopCheck(true);
+            }
+            else {
+                setAnswer(false);
+            }
         }
+
     }
     poseParameters.pose15Action = () => {
-        if (currentGesture == poseParameters.pose15) {
-            setAnswer(true);
+        if (stopCheck == true) {
+            return;
         }
         else {
-            setAnswer(false);
+            if (currentGesture == poseParameters.pose15) {
+                setAnswer(true);
+                setStopCheck(true);
+            }
+            else {
+                setAnswer(false);
+            }
         }
+
     }
     poseParameters.pose16Action = () => {
-        if (currentGesture == poseParameters.pose16) {
-            setAnswer(true);
+        if (stopCheck == true) {
+            return;
         }
         else {
-            setAnswer(false);
+            if (currentGesture == poseParameters.pose16) {
+                setAnswer(true);
+                setStopCheck(true);
+            }
+            else {
+                setAnswer(false);
+            }
         }
-    }
-    poseParameters.pose17Action = () => {
-        if (currentGesture == poseParameters.pose17) {
-            setAnswer(true);
-        }
-        else {
-            setAnswer(false);
-        }
-    }
 
-
+    }
 
     return (
         <div className="oefen_screen">
             <div className="oefen_afbeeldingen" style={{"maxWidth" : "50%"}}>
-                <div class="container">
+                <div class="oefen_screen_container">
 	                <div class="top">
     	                <ul>
                             <li><a href="#img_1"><img src={a} onClick={() => setCurrentGesture("a")}/></a></li>
@@ -187,7 +307,6 @@ function gesturescreen() {
                             <li><a href="#img_14"><img src={v} onClick={() => setCurrentGesture("v")}/></a></li>
                             <li><a href="#img_15"><img src={x} onClick={() => setCurrentGesture("x")}/></a></li>
                             <li><a href="#img_16"><img src={y} onClick={() => setCurrentGesture("y")}/></a></li>
-                            <li><a href="#img_17"><img src={z} onClick={() => setCurrentGesture("z")}/></a></li>
                         </ul>
                         <a href="#_1" class="lightbox trans" id="img_1"><img src={a}/></a>
                         <a href="#_2" class="lightbox trans" id="img_2"><img src={b}/></a>
@@ -205,16 +324,17 @@ function gesturescreen() {
                         <a href="#_14" class="lightbox trans" id="img_14"><img src={v}/></a>
                         <a href="#_15" class="lightbox trans" id="img_15"><img src={x}/></a>
                         <a href="#_16" class="lightbox trans" id="img_16"><img src={y}/></a>
-                        <a href="#_16" class="lightbox trans" id="img_17"><img src={z}/></a>
                     </div>
                 </div>
             </div>
 		    <div className="gesture_container">
                 {testGesture()}
                 <div className="question_container">
-                    Kies een handgebaar om te oefenen: {!currentGesture == '' ? <div>{currentGesture}</div> : null}
-                    
-                    {answer == null ? null : (answer ? <div className="gestureAnswer">Correct!</div> : <div className="gestureAnswer">Incorrect!</div>)}
+                    <div className="vraag_container">
+                        Kies een handgebaar om te oefenen: {!currentGesture == '' ? <div className="chosen_gesture">&nbsp;&nbsp;{currentGesture}</div> : null}
+                    </div>
+                    {answer != null ? checkAnswer() : null}
+                    <div className="refreshButton_container"><button className="refresh_button" onClick={() => refresh()}>Opnieuw</button></div>
                 </div>
             </div>
         </div>
