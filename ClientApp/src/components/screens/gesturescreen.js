@@ -38,7 +38,7 @@ function gesturescreen() {
             return null
         }
         else {
-            return  answer ? <div className = "correctAnswer_HandGesture">Correct!</div> : <div className="incorrectAnswer_HandGesture">Incorrect!</div>
+            return  answer ? <div className = "correctAnswer">Correct!</div> : <div className="incorrectAnswer">Incorrect!</div>
         }
         
     }
