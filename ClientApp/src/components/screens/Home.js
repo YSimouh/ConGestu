@@ -34,7 +34,7 @@ function Card({title,body, button}) {
       return(
           <>
             <Container>
-                <Row>
+                <Row className='home-row'>
                     <Col>
                         
                         <Card
