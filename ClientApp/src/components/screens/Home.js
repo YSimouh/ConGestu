@@ -1,9 +1,6 @@
 ﻿import React from 'react';
 import '../design/home.css';
 import '../design/design.css'
-import  logo from '../pictures/logo-transparant.png';
-// import videoBG from '../videos/BGvideo.mp4'
-// import { Navbar, Nav, Container } from 'react-bootstrap';
 import {Link } from "react-router-dom";
 import { Container, Row , Col} from 'react-bootstrap';
 
@@ -34,7 +31,7 @@ function Card({title,body, button}) {
       return(
           <>
             <Container>
-                <Row>
+                <Row className='home-row'>
                     <Col>
                         
                         <Card

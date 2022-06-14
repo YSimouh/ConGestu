@@ -6,7 +6,7 @@ import Information from './components/screens/Information';
 import Home from './components/screens/Home';
 import Levelholder from './components/parts/levelholder';
 import Oefenen from './components/screens/Oefenen'
-//import './design/NavBarBootstrap.css';
+// import './design/NavBarBootstrap.css';
 import './bootstrap.css';
 import Login from './components/screens/Login';
 import createAccount from './components/screens/createAccount';
