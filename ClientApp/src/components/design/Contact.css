@@ -10,6 +10,7 @@
     padding: 20px; 
 }
 .h1-title{
+    margin-bottom:28px;
     padding-top: 20px;
     font-weight:bolder;
     color: #1d3461;
@@ -24,6 +25,7 @@
     padding:30px;
 }
 
+
 .contact-us{
     width:100%;
     max-width: 600px;
@@ -31,18 +33,20 @@
     max-height: 600px; 
 }
 .message-text{
-    /* margin-left: 10px; */
+    margin: 10px 0 0;
     color: black;
     width: 100%;
     max-width:510px;
+    /* margin:0 auto; */
     display: flex;
     align-items:center;
     justify-content:center;
+    font-size:16px;
+    padding:0.375rem 0.75rem;
 }
 
 .btn-send{
-    vertical-align: middle;
-    margin-top: 20px;
+    vertical-align: middle;     
     width: 100%;
     max-width:150px;
     height:40px;
@@ -50,6 +54,7 @@
     color:black;
     background-color: #E6AF2E;
     border-radius: 5px;
+    margin:20px 0 0 0;
 }
 .btn-send:hover{
     color: black;
@@ -61,6 +66,25 @@
     justify-content: center;
 } */
 .contact-form{
-    margin-left: -45px;
-    width:600px;
+    /* margin-left: -45px; */
+    /* width:600px; */
+}
+
+.contact-us input[type="text"], input[type="password"] {
+    height: 100%;
+    border: none;
+    color: inherit;
+    font-size: 16px;
+    width: 100%;
+    margin:0;
+    padding:0.375rem 0.75rem;
+    height:37px;
+    max-width:100%;
+}
+.contact-form .row .form-group.row {
+    margin: 0 0 10px 0;
+}
+
+.contact-us.col .col .contact-form {
+    align-items:baseline;
 }

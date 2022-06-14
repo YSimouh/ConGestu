@@ -5,51 +5,91 @@ import  logo from '../pictures/logo-transparant.png';
 // import videoBG from '../videos/BGvideo.mp4'
 // import { Navbar, Nav, Container } from 'react-bootstrap';
 import {Link } from "react-router-dom";
-
-function isLoggedIn() {
-
-
-    if (localStorage.getItem("currentUser") === null) {
-        return <div className="WelcomeContainer">Maak een account aan om progressie op te slaan!</div>
-
-    }
-    else {
-        let currentUser = localStorage.getItem("currentUser");
-        currentUser = JSON.parse(currentUser);
-        if (currentUser.username != "") {
-            return <div className="WelcomeContainer">Welkom terug {currentUser.username}!</div>
-        }
-        else {
-            return <div className="WelcomeContainer">Maak een account aan om progressie op te slaan!</div>
-        }
-    }
-
-}
+import { Container, Row , Col} from 'react-bootstrap';
 
 
 
-function Home() {
+
+function Card({title,body, button}) {
     return (
-        <div className='center'>
-            
-            <h1 id="welkom">Welkom bij</h1>
-
-            <img class="home-header-img" src = {logo}/>     
-                <div class="overlap-group">
-                  <h1>
-                    Begin met het leren <br/>van gebarentaal
-                    </h1>
-                    <Link to="/courses" style={{ textDecoration: 'none' }}>
-                    <button className="button">
-                        CURSUSSEN
-                    </button>
-                    </Link>         
-            </div>
-            <div style={{"justifyContent" : "center", "display" : "flex"}}>
-                {isLoggedIn()}
-            </div>
-        </div>
+      <div className='c-Home'>
+          <div className='c-content'>
+              <div>
+                  <h3 className='cHome-title' >{title}</h3>
+              </div>
+              <div className='cHome-body'>
+                  {body}
+                  
+              </div>
+              <div className='cHome-button'>
+                {button}
+              </div>
+              
+          </div>
+          
+      </div>
     )
-}
-
-export default Home
+  }
+  function Home(){
+      return(
+          <>
+            <Container>
+                <Row>
+                    <Col>
+                        
+                        <Card
+                            title='Cursus'
+                            body="Leer gebarentaal met een interactieve cursus!"
+                            button={ <Link to="/courses" style={{ textDecoration: 'none' }}>
+                                <button className="button">
+                                    Start
+                                </button>
+                                </Link>}                          
+                        />
+                         
+                    
+                    </Col>
+                    <Col>
+                    <Card
+                        title='Vertaalmachine'
+                        body="Vertaal tekst of spraak naar gebarentaal"
+                        button={
+                            <Link to="/translate" style={{ textDecoration: 'none' }}>
+                                <button className="button">
+                                    Start
+                                </button>
+                            </Link>}               />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                    <Card
+                        title='Transcriptor'
+                        body="Gebruik een transcriptor om spraak op te nemen en op te slaan"
+                        button={
+                            <Link to="/transcriber" style={{ textDecoration: 'none' }}>
+                                <button className="button">
+                                    Start
+                                </button>
+                            </Link>}                         
+                    />
+                    </Col>
+                    <Col>
+                    <Card
+                        title='Informatie'
+                        body="Kom meer te weten over gebarentaal en communicatie met doven"
+                        button={ 
+                            <Link to="/information" style={{ textDecoration: 'none' }}>
+                                <button className="button">
+                                    Start
+                                </button>
+                            </Link>}                          />  
+                    </Col>
+                </Row>
+            </Container>
+          
+          
+          </>
+      )
+  }
+  export default Home;

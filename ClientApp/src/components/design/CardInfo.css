@@ -1,4 +1,5 @@
 
+
 .card-container{
     margin-top :100px;
     /* overflow:hidden; */
@@ -15,16 +16,23 @@
 }
 .btn-read{
     border: none;
-    background:none;
+    background:hsl(42, 79%, 54%);
     font-size: 10px;
     color: #1d3461;
+    transition:0.25s ease-in;
+}
+.btn-read:hover{
+
+    background:hsl(42, 79%, 40%);
+
 }
 
-.image-container{
+.image-container-info{
     width:100%;
+    height:200px;
 }
 
-.image-container img{
+.image-container-info img{
     overflow:hidden;
     height:200px;
     width:100%;
