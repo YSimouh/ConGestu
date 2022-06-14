@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ClientApp",
+    "\\ClientApp\\src",
+    "\\ClientApp\\src\\components",
+    "\\ClientApp\\src\\components\\design",
+    "\\ClientApp\\src\\components\\Functions",
+    "\\ClientApp\\src\\components\\parts",
+    "\\ClientApp\\src\\components\\screens"
+  ],
+  "SelectedNode": "\\ClientApp\\src\\components\\screens\\gesturescreen.js",
+  "PreviewInSolutionExplorer": false
+}
