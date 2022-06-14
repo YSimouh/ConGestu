@@ -8,10 +8,10 @@ import generate from '../Functions/Generators';
 
 function Courses() {
   return (
-
       <div class="rows">
         <Cursusoption link={"\showlevels"} oefenlink={"\Oefenen"} 
-			questions={generate(7,"sign",["A","B","C","D","E","F","G","H","O","Q","R","S","U","V","X","Y","Z"],"Letter")} 
+			questions={generate(7,"sign",["A","B","C","D","E","F","G","H","O","Q","R","S","U","V","X","Y","Z"],"Letter")}
+      webcam="/gesture" 
 			path="sign" signs={["A","B","C","D","E","F","G","H","O","Q","R","S","U","V","X","Y","Z"]} syntax="Letter"
       oefentext="Zoals het gesproken Nederlands, heeft Nederlandse Gebarentaal (NGT) een alfabet. Ondanks dat NGT geen 'woorden heeft, kun je het handgebarenalfabet wel gebruiken om bijvoorbeeld je naam te spellen, of een woord te spellen waar je het gebaar niet van weet. "
       header="Alfabet" text="Leer het alfabet van Nederlandse gebarentaal" class="item"/>
