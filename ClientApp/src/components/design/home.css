@@ -4,8 +4,8 @@
 }
 body{
     background-image: linear-gradient(120deg,#e7e8ea, #6290c3);
+    /* background-image: '../pictures/bg.jpg'; */
 
-    /* color: white; */
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
 
@@ -13,12 +13,7 @@ body{
 }
 
 .c-Home{
-    /* background-image: url(../pictures/logo2.png);
-    background-repeat: no-repeat; */
 
-    
-    /* background-size: 680px 260px; */
-    /* width:630px; */
     min-width:50px;
     height: 300px;
     border-radius: 10px;
@@ -36,22 +31,8 @@ body{
 
 }
 
-/* 
-.img-Home{
-    width:100%;
-
-}
-
-.img-Home img{
-    overflow:hidden;
-    height:150px;
-    width:100%;
-    margin-block-end: 5px;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px
-} */
 .c-Home:hover{
-    /* transform:scale(1.1); */
+
     box-shadow: 0px 0px 15px 0px;
     background-color: #1d3461;
    
@@ -76,97 +57,8 @@ body{
 
 .cHome-button{
     text-align: center;
-    /* margin-top: 60px; */
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
-/* *{
-    box-sizing: border-box;
-
-}
-.maincontainer{
-    width: 100%;
-    height: 100vh;
-}
-
-video{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.maincontainer{
-    width: 100%;
-    height: 100vh;
-}
-
-video{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-body{
-    background-image: linear-gradient(120deg,#e7e8ea, #6290c3);
-    color: white;
-    font-family: "Poppins", sans-serif;
-    min-height: 100vh;
-
-    
-}
-.center{
-    text-align: center;
-}
-
-
-header{
-    font-size: 1.5rem;
-}
-
-
-header, form{
-    min-height: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-form input, form button{
-    padding: 0.5rem;
-    font-size: 2rem;
-    border:none;
-    background: white;
-}
-
-form button{
-    color: #e48f78;
-    background: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-form button:hover{
-    background: #e48f78;
-    color:white; 
-}
-
-.home-header-img {
-    max-width:100%;
-}
-
-#welkom{
-    color:black;
-    font-weight: bold;
-}
-.content{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-} */
