@@ -37,7 +37,7 @@ export default function Oefenen(props) {
     <div className='oefencontainer'>
         {signs.map((sign) => 
         <div className='oefenbox'>
-          <h1>{syntax} {sign}</h1>
+          <h1 className="oefencontainer-text" >{syntax} {sign}</h1>
           <img src={require("../pictures/"+`${path}`+"/"+`${sign}`+".png")} className="oefenimg"/>
         </div>
         )

@@ -41,3 +41,7 @@
 .oefenimg:hover{
     filter: blur(0);
 }
+.oefencontainer-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
