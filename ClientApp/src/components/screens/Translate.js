@@ -2,13 +2,37 @@ import React from 'react';
 import { Form, Button, Dropdown, DropdownButton, InputGroup } from 'react-bootstrap';
 import '../design/translate.css';
 import {useState,useEffect} from 'react';
-import koekje from '../pictures/2eten-en-drinken/koekje.png'
-import koffie from '../pictures/2eten-en-drinken/koffie.png'
-import peer from '../pictures/2eten-en-drinken/peer.png'
-import melk from '../pictures/2eten-en-drinken/melk.png'
-import blij from '../pictures/3omgang/blij.png'
-import leuk from '../pictures/3omgang/leuk.png'
 import { MdKeyboardVoice,MdFiberManualRecord } from "react-icons/md";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import "swiper/css";
+// import "swiper/css/navigation";
+// import "swiper/css/pagination";
+// import { Navigation, Manipulation, Pagination } from "swiper";
+
+
+import auto from '../pictures/translate-page/auto.png'
+import blij from '../pictures/translate-page/blij.png'
+import drinken from '../pictures/translate-page/drinken.png'
+import eten from '../pictures/translate-page/eten.png'
+import huis from '../pictures/translate-page/huis.png'
+import ik from '../pictures/translate-page/ik.png'
+import koek from '../pictures/translate-page/koek.png'
+import koffie from '../pictures/translate-page/koffie.png'
+import krijgen from '../pictures/translate-page/krijgen.png'
+import leuk from '../pictures/translate-page/leuk.png'
+import macaroni from '../pictures/translate-page/macaroni.png'
+import mama from '../pictures/translate-page/mama.png'
+import mandarijn from '../pictures/translate-page/mandarijn.png'
+import melk from '../pictures/translate-page/melk.png'
+import naam from '../pictures/translate-page/naam.png'
+import niet from '../pictures/translate-page/niet.png'
+import papa from '../pictures/translate-page/papa.png'
+import peer from '../pictures/translate-page/peer.png'
+import sinaasappel from '../pictures/translate-page/sinaasappel.png'
+import willen from '../pictures/translate-page/willen.png'
+
+
+// import "./styles.css";
 
 const SpraakHerkenning = window.SpeechRecognition || window.webkitSpeechRecognition;
 const mic = new SpraakHerkenning()
@@ -18,76 +42,128 @@ mic.interimResults= true
 mic.lang='nl-NL'
 
 
-
-
-
 function Translate() {
     const [listening,setlistening]=useState(false)
     const [message, setMessage] = useState('');
     
     let errorMessage = document.getElementById('error-message-id')
 
-    const signList = ['koekje', 'koffie', 'peer', 'melk', 'blij', 'leuk', 'eten is op']
-    const signList1 = ['ik', 'jij', 'hij', 'zij', 'wij', 'hen']
-    const signList2 = ['koekje', 'kaas', 'mensen', 'koffie', 'auto', 'macaroni', 'melk', 'sinaasappel', 'peer']
-    const signList3 = ['eten', 'krijgen', 'kunnen', 'praten', 'koken', 'lopen', 'hebben', 'staan', 'zien', 'rijden', 'willen', 'gaan']
-    const signList4 = ['blij', 'boos', 'leuk', 'groot', 'klein', 'geel', 'groen', 'mooi', 'lekker', 'niet', 'naam']
-    const noNoList = ['de', 'het', 'een']
     let inputArray = []
     let inputString = ''
 
     var wordList = {
       ik: ['ik'],
-      jij:['jij', 'je', 'jou'],
-      hij:['hij'],
-      zij:['zij'],
-      wij:['wij'],
-      hen:['hen', 'hun'],
+      // jij:['jij', 'je', 'jou'],
+      // hij:['hij'],
+      // zij:['zij'],
+      // wij:['wij'],
+      // hen:['hen', 'hun'],
 
-      koek:['koek', 'koekje', 'koekjes', 'koeken'],
-      kaas:['kaas', 'kazen', 'kaasje', 'kaasjes'],
-      mensen:['mensen', 'mens', 'mensje', 'mensjes'],
+      koek:['koeken', 'koekje', 'koekjes', 'koek'],
+      // kaas:['kaas', 'kazen', 'kaasje', 'kaasjes'],
+      // mensen:['mensen', 'mens', 'mensje', 'mensjes'],
       koffie:['koffie', 'koffietje'],
       auto:['auto', "auto's", 'autotje', 'autootjes'],
       macaroni:['macaroni'],
       melk:['melk'],
       sinaasappel:['sinaasappel', 'sinaasappelen', 'sinaasappeltje', 'sinaasapppeltjes'],
+      mandarijn:['mandarijnen', 'mandarijn', 'mandarijntje', 'mandarijntjes'],
       peer:['peer', 'peren', 'peertje', 'peertjes'],
+      
+      papa:['papa', 'vader', 'pa', 'pap'],
+      mama: ['mama', 'mam', 'ma', 'moeder'],
 
+      huis:['huis', 'huizen', 'huisje', 'huisjes'],
+
+      drinken: ['drinken','drink', 'drinkt', 'dronk', 'dronken', 'gedronken'],
       eten:['eten', 'eet', 'at', 'aten', 'gegeten'],
       krijgen:['krijgen', 'krijg', 'krijgt', 'kreeg', 'kregen', 'gekregen'],
-      kunnen:['kunnen', 'kan', 'kon', 'konden', 'gekund' ],
-      praten:['praten', 'praat', 'praatte', 'praatten', 'gepraat'],
-      koken:['koken', 'kook', 'kookt', 'kookte', 'kookten', 'gekookt'],
-      lopen:['lopen', 'loop', 'loopt', 'loopte', 'loopten', 'geloopt'],
-      hebben:['hebben', 'heb', 'heeft', 'had', 'hadden', 'gehad'],
-      staan:['staan', 'sta', 'staat', 'stond', 'stonden', 'gestaan'],
-      zien:['zien', 'zie', 'ziet', 'zag', 'zagen', 'gezien'],
-      rijden:['rijden', 'rij', 'rijdt', 'reed', 'reden', 'gereden'],
-      willen:['willen', 'wil', 'wilde', 'wilden', 'gewild'],
-      gaan:['gaan', 'ga', 'gaat', 'ging', 'gingen', 'gegaan'],
+      // kunnen:['kunnen', 'kan', 'kon', 'konden', 'gekund' ],
+      // praten:['praten', 'praat', 'praatte', 'praatten', 'gepraat'],
+      // koken:['koken', 'kook', 'kookt', 'kookte', 'kookten', 'gekookt'],
+      // lopen:['lopen', 'loop', 'loopt', 'loopte', 'loopten', 'geloopt'],
+      // hebben:['hebben', 'heb', 'heeft', 'had', 'hadden', 'gehad'],
+      // staan:['staan', 'sta', 'staat', 'stond', 'stonden', 'gestaan'],
+      // zien:['zien', 'zie', 'ziet', 'zag', 'zagen', 'gezien'],
+      // rijden:['rijden', 'rij', 'rijdt', 'reed', 'reden', 'gereden'],
+      willen:['willen', 'wil', 'wilde', 'wilden', 'gewild', 'wilt'],
+      // gaan:['gaan', 'ga', 'gaat', 'ging', 'gingen', 'gegaan'],
 
       blij:['blij'],
-      boos:['boos'],
-      leuk:['leuk'],
-      groot:['groot'],
-      klein:['klein', 'kleintje'],
-      geel:['geel'],
-      groen:['groen'],
-      mooi:['mooi'],
-      lekker:['lekker'],
-      niet:['niet'],
+      // boos:['boos'],
+      leuk:['leuk', 'leuke'],
+      // groot:['groot'],
+      // klein:['klein', 'kleintje'],
+      // geel:['geel'],
+      // groen:['groen'],
+      // mooi:['mooi'],
+      // lekker:['lekker'],
+      niet:['niet', 'geen'],
       naam:['naam', 'namen', 'naampje', 'naampjes'],
+    }
+
+    // let wrapperID = document.getElementsByClassName("swiper-wrapper");
+    // Array.from(wrapperID).forEach( element => {
+    //   element.setAttribute("id", "swiper-wrapper-id");
+    // });
+
+    function checkWord(word){
+      let x = '';
+      if(word == 'ik'){x = ik}
+      else if(word == 'koek'){x = koek}
+      else if(word == 'koffie'){x = koffie}
+      else if(word == 'auto'){x = auto}
+      else if(word == 'macaroni'){x = macaroni}
+      else if(word == 'melk'){x = melk}
+      else if(word == 'sinaasappel'){x = sinaasappel}
+      else if(word == 'mandarijn'){x = mandarijn}
+      else if(word == 'peer'){x = peer}
+      else if(word == 'papa'){x = papa}
+      else if(word == 'mama'){x = mama}
+      else if(word == 'huis'){x = huis}
+      else if(word == 'drinken'){x = drinken}
+      else if(word == 'eten'){x = eten}
+      else if(word == 'krijgen'){x = krijgen}
+      else if(word == 'willen'){x = willen}
+      else if(word == 'blij'){x = blij}
+      else if(word == 'leuk'){x = leuk}
+      else if(word == 'niet'){x = niet}
+      else if(word == 'naam'){x = naam}
+      return x;
     }
 
     function createImg(word) {
       var img = document.createElement('img');
-      let srcText = '/translate-page/' + word +'.png'
+      // let srcText = '../pictures/translate-page/' + word +'.png'
+      // console.log({word})
+      let srcText = checkWord(word);
       img.src = srcText;
       img.classList.add('show', 'picture');
       img.alt = word
       img.id = word
       document.getElementById('translate-result-container').appendChild(img);
+
+
+      // var newSliderDiv = document.createElement('div');
+      // newSliderDiv.classList.add('swiper-slide');
+      // newSliderDiv.style = "width:300px";
+      // var newSliderImg = document.createElement('img');
+      // newSliderImg.src = 'ey';
+      // newSliderDiv.appendChild(newSliderImg);
+
+      // let paginationMax = document.getElementsByClassName("swiper-pagination-total");
+      // Array.from(paginationMax).forEach( element => {
+      //   let paginationCurrent = element.textContent;
+      //   console.log(paginationCurrent);
+      //   element.textContent = parsent(element.textContent)+1;
+      // })
+
+      // // let newImg = 
+      // // <div class="swiper-slide" style="width: 300px;">
+      // //   <img src="/static/media/koeken.27365d4f7d4c58ad2817.png" class="carousel-picture" alt=""/>
+      // // </div>;
+      // document.getElementById('swiper-wrapper-id').appendChild(newSliderDiv);
+    
     } 
 
     function translateInput(input){
@@ -133,10 +209,10 @@ function Translate() {
       Array.from(picturesHTML).forEach( element => {
         element.remove();
       })
+
       document.getElementById('error-message-id').classList.remove('show');
 
       translateInput(message);
-
     };
 
     useEffect(()=>{
@@ -184,7 +260,7 @@ function Translate() {
           Vul in het linker veld de tekst die je vertaald wilt hebben. Druk vervolgens op de "Vertaal" knop.
         </p>
       </div>
-      <div className="words-container">
+      {/* <div className="words-container">
         <h2>Deze woorden zijn op dit moment beschikbaar</h2>
         <div className="words-row">
           {signList1.map(item => {
@@ -206,22 +282,53 @@ function Translate() {
               return <span>{item}, </span>;
             })}
         </div>
-      </div>
-        <Form>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <InputGroup>       
-              <InputGroup.Text>
-              {!listening?<MdKeyboardVoice size={40} fill='black' onClick={()=>setlistening(!listening)}/>:<MdFiberManualRecord size={40} fill='black' onClick={handleRecord}/>}
-                {/* <MdKeyboardVoice size={40} fill='black' onClick={()=>setlistening(!listening)}/> */}
-                
-              </InputGroup.Text>
-              <Form.Control onChange={handleChange} value={message} as="textarea" rows={4} />
-            </InputGroup>
-          </Form.Group>
-        </Form>
-        <Button onClick={handleClick} variant="primary">Vertaal</Button>{' '}
+      </div> */}
+      <Form>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+          <InputGroup>       
+            <InputGroup.Text>
+            {!listening?<MdKeyboardVoice size={40} fill='black' onClick={()=>setlistening(!listening)}/>:<MdFiberManualRecord size={40} fill='black' onClick={handleRecord}/>}
+              {/* <MdKeyboardVoice size={40} fill='black' onClick={()=>setlistening(!listening)}/> */}
+              
+            </InputGroup.Text>
+            <Form.Control onChange={handleChange} value={message} as="textarea" rows={4} />
+          </InputGroup>
+        </Form.Group>
+      </Form>
+      <Button onClick={handleClick} variant="primary">Vertaal</Button>{' '}
+
+
+        {/* <Swiper
+            // onSwiper={setSwiperRef}
+            // slidesPerView={3}
+            centeredSlides={true}
+            pagination={{
+              type: "fraction",
+            }}
+            id="swiper-container"
+            navigation={true}
+            modules={[Pagination, Navigation, Manipulation]}
+            className="mySwiper"
+          >          
+          <SwiperSlide>
+            <img
+              src={naam}
+              className="carousel-picture"
+              alt=""
+            />
+          </SwiperSlide>
+        </Swiper> */}
+
+        
+
+
         <div className="translate-result-container" id="translate-result-container">
+          {/* <div className="translate-result-wrapper">
+            <p>Text</p>
+            <img className="translate-result-picture" />
+          </div> */}
         </div>
+
         <p className="error-message" id="error-message-id">Dit woord kennen wij niet, probeer het nog eens</p>
       </div>
   )

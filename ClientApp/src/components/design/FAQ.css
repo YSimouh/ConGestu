@@ -31,11 +31,16 @@
     color: #1d3461;
 }
 
+.item .title-Q{
+    font-size:21px;
+}
+
 .content{
     color:#fafdff;
     max-height: 0;
     overflow:hidden;
     transition: all 0s cubic-bezier(1,0,1,0);
+    font-size:1rem;
 }
 
 .content.show{
