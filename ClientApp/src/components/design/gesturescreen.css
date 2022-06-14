@@ -27,12 +27,12 @@
     max-width: 100%;
     width: 100%;
 }
-.correctAnswer_HandGesture{
+.correctAnswer{
     width: 100%;
     font-weight: bold;
     color: lawngreen;
 }
-.incorrectAnswer_HandGesture{
+.incorrectAnswer{
     width: 100%;
     font-weight: bold;
     color: red;
