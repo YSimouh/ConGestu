@@ -1,5 +1,6 @@
 .oefenheadercontainer{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 2%;
@@ -7,6 +8,7 @@
 .oefenheader{
     width: 600px; 
     text-align: center;
+    padding-bottom: 10px;
 }
 .oefencontainer{
     display: flex;

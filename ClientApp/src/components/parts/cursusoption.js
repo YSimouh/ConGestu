@@ -20,7 +20,8 @@ export default function Cursusoption(props){
                         path:props.path,
                         signs:props.signs,
                         syntax: props.syntax,
-                        text: props.oefentext
+                        text: props.oefentext,
+                        webcam: props.webcam
                         }
                     }}  style={{ textDecoration: 'none' }}>
                     <button class="oefenen">
