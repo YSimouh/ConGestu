@@ -4,7 +4,7 @@ import '../design/oefenen.css'
 import styles from '../design/buttondesign.css'
 import {AwesomeButton,AwesomeButtonProgress,AwesomeButtonSocial,} from 'react-awesome-button';
 import { Link } from 'react-router-dom';
-
+import '../design/textdesign.css'
 export default function Oefenen(props) {
   const location=useLocation();
   const {path,signs,syntax,text,webcam}=location.state;
@@ -16,8 +16,10 @@ export default function Oefenen(props) {
     <div>
       <div className='oefenheadercontainer'>
         <div className='oefenheader'>
-          <h1>Module oefenen</h1>
-          <p> 
+
+          <h1 className='dynamic-text-shadow'>MODULE OEFENEN</h1>
+          
+          <p className='text-under-header'> 
             {text}
             Probeer eerst te raden wat het antwoord is, als je er niet uit komt kun je het antwoord onthullen. Dit doe je 
             door je muis over de foto te halen. Herhaal dit proces totdat je zeker weet dat je alles weet!
