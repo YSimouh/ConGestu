@@ -38,11 +38,11 @@ function gesturescreen() {
             return null
         }
         else {
-            return  answer ? <div className = "correctAnswer">Correct!</div> : <div className="incorrectAnswer">Incorrect!</div>
+            return  answer ? <div className = "correctAnswer_HandGesture">Correct!</div> : <div className="incorrectAnswer_HandGesture">Incorrect!</div>
         }
         
     }
-    poseParameters.classifySpeed = 500
+    poseParameters.classifySpeed = 700
 
     poseParameters.pose1Action = () => {
         if (stopCheck == true) {
