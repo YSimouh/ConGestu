@@ -1,0 +1,8 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:44408",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "C:\\Users\\Jingk\\Documents\\C#\\ConGestu\\ClientApp\\",
+"MaxTimeoutInSeconds": "120"
+}
+}
