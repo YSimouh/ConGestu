@@ -68,7 +68,7 @@ export default function Levelholder(props) {
 		<div className='app'>
 			{showScore ? (
 				<div className='score-section'>
-					U heeft {score} van de {questions.length} vragen goed!
+					Je hebt {score} van de {questions.length} vragen goed!
 				</div>
 			) : (
 				<>
