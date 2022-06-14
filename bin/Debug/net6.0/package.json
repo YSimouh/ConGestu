@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "react-circular-progressbar": "^2.0.4",
-    "write-file-atomic": "^4.0.1",
-    "write-json-file": "^5.0.0"
-  }
-}
