@@ -38,6 +38,11 @@
     color: red;
 }
 
+.image_container_oefenscherm{
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
 .chosen_gesture{
     font-weight: bold;
 

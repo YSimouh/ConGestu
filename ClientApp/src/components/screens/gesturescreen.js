@@ -291,22 +291,22 @@ function gesturescreen() {
                 <div class="oefen_screen_container">
 	                <div class="top">
     	                <ul>
-                            <li><a href="#img_1"><img src={a} onClick={() => setCurrentGesture("a")}/></a></li>
-                            <li><a href="#img_2"><img src={b} onClick={() => setCurrentGesture("b")}/></a></li>
-                            <li><a href="#img_3"><img src={c} onClick={() => setCurrentGesture("c")}/></a></li>
-                            <li><a href="#img_4"><img src={d} onClick={() => setCurrentGesture("d")}/></a></li>
-                            <li><a href="#img_5"><img src={e} onClick={() => setCurrentGesture("e")}/></a></li>
-                            <li><a href="#img_6"><img src={f} onClick={() => setCurrentGesture("f")}/></a></li>
-                            <li><a href="#img_7"><img src={g} onClick={() => setCurrentGesture("g")}/></a></li>
-                            <li><a href="#img_8"><img src={h} onClick={() => setCurrentGesture("h")}/></a></li>
-                            <li><a href="#img_9"><img src={o} onClick={() => setCurrentGesture("o")}/></a></li>
-                            <li><a href="#img_10"><img src={q} onClick={() => setCurrentGesture("q")}/></a></li>
-                            <li><a href="#img_11"><img src={r} onClick={() => setCurrentGesture("r")}/></a></li>
-                            <li><a href="#img_12"><img src={s} onClick={() => setCurrentGesture("s")}/></a></li>
-                            <li><a href="#img_13"><img src={u} onClick={() => setCurrentGesture("u")}/></a></li>
-                            <li><a href="#img_14"><img src={v} onClick={() => setCurrentGesture("v")}/></a></li>
-                            <li><a href="#img_15"><img src={x} onClick={() => setCurrentGesture("x")}/></a></li>
-                            <li><a href="#img_16"><img src={y} onClick={() => setCurrentGesture("y")}/></a></li>
+                            <li><a href="#img_1"><img className="image_container_oefenscherm" src={a} onClick={() => setCurrentGesture("a")}/></a></li>
+                            <li><a href="#img_2"><img className="image_container_oefenscherm" src={b} onClick={() => setCurrentGesture("b")}/></a></li>
+                            <li><a href="#img_3"><img className="image_container_oefenscherm" src={c} onClick={() => setCurrentGesture("c")}/></a></li>
+                            <li><a href="#img_4"><img className="image_container_oefenscherm" src={d} onClick={() => setCurrentGesture("d")}/></a></li>
+                            <li><a href="#img_5"><img className="image_container_oefenscherm" src={e} onClick={() => setCurrentGesture("e")}/></a></li>
+                            <li><a href="#img_6"><img className="image_container_oefenscherm" src={f} onClick={() => setCurrentGesture("f")}/></a></li>
+                            <li><a href="#img_7"><img className="image_container_oefenscherm" src={g} onClick={() => setCurrentGesture("g")}/></a></li>
+                            <li><a href="#img_8"><img className="image_container_oefenscherm"src={h} onClick={() => setCurrentGesture("h")}/></a></li>
+                            <li><a href="#img_9"><img className="image_container_oefenscherm" src={o} onClick={() => setCurrentGesture("o")}/></a></li>
+                            <li><a href="#img_10"><img className="image_container_oefenscherm" src={q} onClick={() => setCurrentGesture("q")}/></a></li>
+                            <li><a href="#img_11"><img className="image_container_oefenscherm" src={r} onClick={() => setCurrentGesture("r")}/></a></li>
+                            <li><a href="#img_12"><img className="image_container_oefenscherm" src={s} onClick={() => setCurrentGesture("s")}/></a></li>
+                            <li><a href="#img_13"><img className="image_container_oefenscherm" src={u} onClick={() => setCurrentGesture("u")}/></a></li>
+                            <li><a href="#img_14"><img className="image_container_oefenscherm" src={v} onClick={() => setCurrentGesture("v")}/></a></li>
+                            <li><a href="#img_15"><img className="image_container_oefenscherm" src={x} onClick={() => setCurrentGesture("x")}/></a></li>
+                            <li><a href="#img_16"><img className="image_container_oefenscherm" src={y} onClick={() => setCurrentGesture("y")}/></a></li>
                         </ul>
                         <a href="#_1" class="lightbox trans" id="img_1"><img src={a}/></a>
                         <a href="#_2" class="lightbox trans" id="img_2"><img src={b}/></a>
