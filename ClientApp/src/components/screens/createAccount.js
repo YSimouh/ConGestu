@@ -34,8 +34,10 @@ function createAccount() {
         const user = {
             username: state.name,
             password: state.pass,
-            courseLevel1: {totalAnswers: 7, answersCorrect: 0},
-            courseLevel2: {totalAnswers: 7, answersCorrect: 0}
+            courseLevel1: { totalAnswers: 7, answersCorrect: 0, gesttotalAnswers: 7, gestAnswersCorrect: 0},
+            courseLevel2: { totalAnswers: 5, answersCorrect: 0 },
+            courseLevel3: { totalAnswers: 5, answersCorrect: 0 },
+
         };
         window.localStorage.setItem(key, JSON.stringify(user))
         setIsSubmitted(true);
@@ -60,12 +62,12 @@ function createAccount() {
     );
 
     return (
-        <div className="app">
-            <div className="login-form">
+        <div className="app_createAccount">
+            <div className="createAccountForm">
                 <div className="title">Account maken</div>
-                {isSubmitted ? <div>Account succesvol aangemaakt!</div> : renderForm}
-                {isSubmitted ? <button className="createAccountButton" onClick={routeBack}>Back</button> : <button className="createAccountButton" onClick={routeBack}>Back</button> }
+                {isSubmitted ? <div className="successful_output" style={{"marginRight" : "auto", "marginLeft" : "auto"}}>Account succesvol aangemaakt!</div> : renderForm}
             </div>
+            {isSubmitted ? <button className="createAccountButton" onClick={routeBack}>Back</button> : <button className="createAccountButton" onClick={routeBack}>Back</button>}
         </div>
     );
 }

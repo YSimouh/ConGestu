@@ -94,7 +94,8 @@ function Login() {
                     username: currentUser.username,
                     password: currentUser.password,
                     courseLevel1: currentUser.courseLevel1,
-                    courseLevel2: currentUser.courseLevel2
+                    courseLevel2: currentUser.courseLevel2,
+                    courseLevel3: currentUser.courseLevel3
                 };
                 window.localStorage.setItem(key, JSON.stringify(user));
 

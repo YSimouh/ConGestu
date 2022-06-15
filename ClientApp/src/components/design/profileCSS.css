@@ -48,12 +48,14 @@
     font-weight: 700;
     font-size: 1.2rem;
 }
-.lower-container p{
-    margin: 1rem;
-    font-weight: 300;
-    color: white; 
-    font-size: 0.9rem;
-    text-align: justify;
+.cursussen_profilePage{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.cursus_container_profile{
+    text-align: left;
+    margin-left: 15px;
 }
 button {
     margin: 1rem;

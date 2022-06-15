@@ -21,7 +21,24 @@
     padding-left: 10px;
     padding-right: 10px;
 }
+.createAccountForm {
+    background-color: #1D3461;
+    padding: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    max-width: 100%;
+    border-radius: 25px;
+    width: 500px;
+    height: 350px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
 
+.app_createAccount{
+    display: flex;
+    flex-direction: column;
+}
 form {
     display: flex;
     justify-content: center;
@@ -70,15 +87,16 @@ input[type="submit"]:hover {
 }
 
 .createAccountButton {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+    margin-top: 30px;
     cursor: pointer;
     font-size: 15px;
     background: #E6AF2E;
     border: 1px solid #D8973C;
     color: white;
     padding: 10px 20px;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .createAccountButton:hover{
     background: #D8973C;

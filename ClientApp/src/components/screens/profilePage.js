@@ -12,8 +12,13 @@ function profilePage() {
     const profile = JSON.parse(window.localStorage.getItem("currentUser"));
     const l1Answers = profile.courseLevel1.answersCorrect;
     const l1TotalAnswers = profile.courseLevel1.totalAnswers;
+    const l1AnswersGest = profile.courseLevel1.gestAnswersCorrect;
+    const l1TotalAnswersGest = profile.courseLevel1.gesttotalAnswers;
     const l2Answers = profile.courseLevel2.answersCorrect;
     const l2TotalAnswers = profile.courseLevel2.totalAnswers;
+    const l3Answers = profile.courseLevel3.answersCorrect;
+    const l3TotalAnswers = profile.courseLevel3.totalAnswers;
+
 
     const history = useHistory();
     const logOut = () => {
@@ -22,7 +27,8 @@ function profilePage() {
             username: "",
             password: "",
             courseLevel1: "",
-            courseLevel2: ""
+            courseLevel2: "",
+            courseLevel3: "",
         };
         window.localStorage.setItem(key, JSON.stringify(user));
         let path = `/login`;
@@ -66,16 +72,28 @@ function profilePage() {
                 </div>
                 <div className="lower-container">
                     <h3> {profile.username} </h3>
-                    <p>Curses 1:
-                        <div style={{ width: 30, height: 30, float: 'right' }}>
-                            {circularProgressBar(l1Answers, l1TotalAnswers)}
+                    <div className="cursussen_profilePage">
+                        <div className="cursus_container_profile">Cursus Alfabet:
+                            <div style={{ width: 30, height: 50, float: 'right', marginRight: "30px", fontSize: "10px"}}>
+                                Normaal
+                                {circularProgressBar(l1Answers, l1TotalAnswers)}
+                            </div>
+                            <div style={{ width: 30, height: 50, float: 'right', marginRight: "15px", fontSize: "10px"}}>
+                                Camera
+                                {circularProgressBar(l1AnswersGest, l1TotalAnswersGest)}
+                            </div>
                         </div>
-                    </p>
-                    <p>Curses 2:
-                        <div style={{ width: 30, height: 30, float: 'right'}}>
-                            {circularProgressBar(l2Answers, l2TotalAnswers)}
+                        <div className="cursus_container_profile">Curses Eten & Drinken:
+                            <div style={{ width: 30, height: 40, float: 'right', marginRight: "30px", marginTop: "10px"}}>
+                                {circularProgressBar(l2Answers, l2TotalAnswers)}
+                            </div>
                         </div>
-                    </p>
+                        <div className="cursus_container_profile">Curses Omgang:
+                            <div style={{ width: 30, height: 40, float: 'right', marginRight: "30px", marginTop: "10px"}}>
+                                {circularProgressBar(l3Answers, l3TotalAnswers)}
+                            </div>
+                        </div>
+                    </div>
                     <button onClick={logOut}>Uitloggen</button>
                 </div>
             </div>

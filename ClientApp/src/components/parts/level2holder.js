@@ -27,7 +27,7 @@ export default function Level2holder(props) {
 		setgest('')
         if (isCorrect) {
 			setScore(score + 1);
-			updateProgress(1, score);
+			updateProgress(1, score, true);
 		}
 
 		const nextQuestion = currentQuestion + 1;
